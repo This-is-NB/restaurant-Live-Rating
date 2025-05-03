@@ -11,3 +11,623 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+.spinner {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4em solid #f3f3f3;
+  border-top: 0.4em solid #fb8519;
+  border-radius: 50%;
+  animation: spinner-rotate 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spinner-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+
+/* === External CSS Imports === */
+@import url('https://kakedihatti.com/assets/wla_new/css/bootstrap.min.css');
+@import url('https://kakedihatti.com/assets/wla_new/css/line-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700');
+@import url('https://kakedihatti.com/assets/wla_new/css/common_20250424.css');
+@import url('https://kakedihatti.com/assets/wla_new/css/ordering_20250430.css');
+
+/* === Inline Styles from <style> blocks === */
+body {
+    font-size: 14px !important;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    font-weight: 600;
+    right: 19px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: linear-gradient(to bottom right, var(--main-bg-color) 0%, #ffffff 100%);
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5em;
+    padding-left: 0.5em !important;
+    border-radius: 100% !important;
+    width: 48px;
+    height: 48px;
+}
+
+.intl-tel-input .selected-flag .iti-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
+}
+
+.intl-tel-input .selected-flag .iti-flag {
+    margin-left: 5px !important;
+}
+
+:root {
+    --main-bg-color: #fb8519;
+    --sec-bg-color: ;
+    --secondary-bg-color: #3f1c00;
+}
+
+.g-recaptcha {
+    margin-top: 15px;
+    /* Add space between input and reCAPTCHA */
+    transform: scale(0.9);
+    /* Adjust scale for mobile */
+    transform-origin: 0 0;
+}
+
+@media (max-width: 768px) {
+    .g-recaptcha {
+        transform: scale(0.85);
+        /* Further reduce scale for smaller devices */
+    }
+}
+
+#updateProfileModal_new.modal.modal-top .modal-body {
+    max-height: 450px;
+}
+
+@media only screen and (max-width: 767px) {
+    #updateProfileModal_new.modal.modal-top .modal-body {
+        max-height: 100%;
+    }
+}
+
+.cart-btn-secondary {
+    background: var(--main-bg-color) !important;
+    border: 1px solid var(--secondary-bg-color) !important;
+    color: var(--secondary-bg-color) !important;
+}
+
+.spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 111111;
+}
+
+.spinner-inner {
+    display: flex;
+    position: fixed;
+    z-index: 1031;
+    top: 50%;
+    right: 50%;
+    transform: translate(0%, -50%);
+    color: var(--main-bg-color);
+    width: 47px;
+    height: 47px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 4px 7px rgb(0 0 0 / 10%);
+}
+
+.spinner-border {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    border: 0.15em solid currentColor;
+    border-right-color: transparent;
+}
+
+.spinner-inner img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* .spinner-inner {
+    right: 43%;
+} */
+@media only screen and (max-width: 767px) {
+    .spinner-inner {
+        right: 43.5%;
+    }
+}
+
+/* .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 50%;
+    right: 50%;
+    margin-top: -..px;
+    margin-right: -..px;
+    color: var(--main-bg-color) !important;
+    width: 4em;
+    height: 4em;
+ } */
+.iti {
+    width: 100%;
+}
+
+.iti .form-control {
+    padding-left: 45px !important;
+}
+
+.iti__arrow {
+    display: none;
+}
+
+.iti--separate-dial-code .iti__selected-flag>.iti__flag {
+    display: none !important;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+    margin-left: 0px;
+}
+
+.iti__selected-flag {
+    padding: 0 8px 0 8px;
+}
+
+@media screen and (min-width: 991px) {
+    #site-navigation .navbar-collapse .nav-link {
+        background: #ffffff !important;
+        color: #fa8708 !Important
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #site-navigation .navbar-collapse .nav-link {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}
+
+.expand_details,
+.expand_details:hover {
+    color: var(--main-bg-color);
+    cursor: pointer;
+}
+
+span.heading-1 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #000;
+}
+
+.cart-last .cart-btn {
+    color: var(--main-bg-color) !important;
+}
+
+.count-n {
+    color: var(--main-bg-color) !important;
+}
+
+/* --- Popular Menu Search Modal Styles --- */
+.category-main-nw {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.category-main-nw li {
+    padding: 0 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.category-main-nw li a {
+    background-color: #fff;
+    display: inline-block;
+    padding: 5px 5px;
+    border-radius: 15px !important;
+    height: 100%;
+    width: 100px;
+}
+
+.category-outer-nw {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+.category-outer-nw img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.category-main-nw li h4 {
+    font-size: 12px;
+    margin: 7px 0 0 0;
+    color: #212529;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+    .category-main-nw {
+        margin: 0 -5px;
+    }
+
+    .category-main-nw li {
+        margin-bottom: 7px;
+        margin-top: 10px;
+        padding: 0 5px;
+    }
+
+    .category-main-nw li a {
+        padding: 5px 5px;
+    }
+
+    .category-main-nw li h4 {
+        font-size: 13px;
+        margin: 8px 0 0 0;
+        line-height: initial;
+    }
+
+    .popular-menu {
+        margin-right: -20px;
+    }
+
+    .popular-menu .popular-head {
+        padding-right: 20px;
+    }
+}
+
+/* --- Reservation Modal Styles --- */
+#reservation-modal .form-row label {
+    display: block;
+}
+
+#reservation-modal .custom-date label {
+    color: #333;
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#reservation-modal .form-row input,
+#reservation-modal .form-row select {
+    width: 100%;
+}
+
+#reservation-modal .custom-date .form-control,
+#reservation-modal .custom-date .form-control,
+#reservation-modal .custom-date select {
+    padding: 15px 30px 15px 15px;
+    border: 1px solid #dadada;
+    background-color: #f5f5f5;
+    border-radius: 4px !important;
+    font-weight: 500;
+    font-size: 14px !important;
+    color: #333;
+    height: auto;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: initial;
+    cursor: pointer;
+    min-height: 50.4px;
+}
+
+#reservation-modal .custom-outer .input-group-addon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    pointer-events: none;
+}
+
+#reservation-modal .custom-outer .input-group-addon-left {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    pointer-events: none;
+}
+
+#reservation-modal .custom-outer {
+    position: relative;
+}
+
+#reservation-modal .custom-outer i {
+    color: #000;
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+    font-size: 14px;
+    width: 10px;
+    height: 10px;
+    padding: 5px 10px;
+}
+
+#reservation-modal .custom-label small {
+    display: block;
+}
+
+#reservation-modal .custom-label {
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    color: #000;
+    line-height: normal;
+    margin-bottom: 7px;
+}
+
+#reservation-modal .timing-ul {
+    padding: 0px;
+    margin: 0px -5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#reservation-modal .timing-ul li {
+    padding: 3px 3px;
+    width: 100%;
+    max-width: 33.33%;
+}
+
+#reservation-modal .timing-ul a {
+    width: 100%;
+    display: inline-flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border: 1px solid #dadada;
+    border-radius: 4px !important;
+}
+
+#reservation-modal .timing-ul a.active {
+    background: #333333;
+    border-color: #333333;
+    color: #fff;
+}
+
+#reservation-modal .nav-tabs {
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-bottom: 12px !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    background-color: #fff !important;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#reservation-modal .nav-tabs .nav-link {
+    border: none;
+}
+
+#reservation-modal .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 3px solid #333333;
+    font-weight: 600;
+    color: #333;
+}
+
+#reservation-modal.pizza-popups .nav-tabs li {
+    width: auto;
+    border: none;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: #fff;
+    margin-top: 0px;
+    position: relative;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+#reservation-modal.pizza-popups .nav-tabs li:before {
+    display: none;
+}
+
+#reservation-modal .modal-content {
+    max-width: 550px;
+}
+
+.custom-date .form-control:focus,
+.custom-date select:focus {
+    outline: none;
+}
+
+.reservation-btn-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+    #reservation-modal .timing-ul li {
+        padding: 3px 3px;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    #reservation-modal .timing-ul a {
+        width: 100%;
+        display: inline-flex;
+        height: 40px;
+    }
+
+    #reservation-modal.pizza-popups .nav-tabs {
+        position: relative;
+        bottom: auto;
+        width: 100%;
+    }
+
+    #reservation-modal .nav-tabs {
+        border-top: none !important;
+        justify-content: center;
+    }
+
+    #reservation-modal.pizza-popups .modal-body {
+        padding: 10px 1rem 5rem 1rem !important;
+    }
+
+    .reservation-btn-div {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        position: fixed;
+        bottom: 0px;
+        background-color: #fff;
+        width: 100%;
+        left: 0px;
+        padding: 10px 10px;
+        box-shadow: 0px 0px 10px #00000029;
+        border-top: 1px solid #EFEFEF;
+    }
+}
+
+#reservation-modal .form-row input,
+#reservation-modal .form-row select {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* --- Sticky Outlets --- */
+.sticky-outlets {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 73px;
+    z-index: 111;
+    background-color: #f3f3f3;
+    margin: 0;
+}
+
+.sticky-outlets>div {
+    padding-left: 0;
+}
+
+.select-outlets-h {
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+
+.outlets-listing-h {
+    width: 100%;
+    max-width: 100px;
+    margin: 10px 10px;
+    display: inline-block;
+}
+
+.select-outlets-h .outlets-listing-h:first-child {
+    margin-left: 0px;
+}
+
+.outlets-listing-h .outlet-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: auto;
+}
+
+.outlet-span {
+    font-size: 0.9em;
+    color: #777;
+    font-weight: 600;
+}
+
+.outlets-listing-h.active .outlet-span {
+    color: var(--main-bg-color);
+}
+
+.outlets-listing-h .outlet-image img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+    /* filter: grayscale(100%); */
+}
+
+/* ... (rest of your CSS if any) ... */

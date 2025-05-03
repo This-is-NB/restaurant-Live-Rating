@@ -1,0 +1,2508 @@
+[
+    {
+        "id": 2099934,
+        "name": "Kake Kababs",
+        "count": 4,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "isActive": true,
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938807,
+                "categoryId": 2099934,
+                "name": "Hara Bhara Kebab [5 Peices]",
+                "price": 429.0,
+                "description": "Kabab Made With Fresh Spinach Leaves, Green Peas And Potatos",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938812,
+                "categoryId": 2099934,
+                "name": "Aloo Gobi Kabab [5 Peices]",
+                "price": 429.0,
+                "description": "Your Favourite Aloo Gobi As A Kebab",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938813,
+                "categoryId": 2099934,
+                "name": "Dahi Ke Kabab [5 Peices]",
+                "price": 429.0,
+                "description": "Creamy Cutlet Patties Recipe Prepared With Yoghurt And Crumbled Paneer",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938814,
+                "categoryId": 2099934,
+                "name": "Veg Seekh Kabab [5 Peices]",
+                "price": 429.0,
+                "description": "Tandoor Baked Kababs With Vegetables Stuffing",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099933,
+        "name": "Breakfast",
+        "count": 7,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938906,
+                "categoryId": 2099933,
+                "name": "Kake Special Paratha",
+                "price": 259.0,
+                "description": "Classic Tawa Paratha Stuffed With Mash Potatoes , Cauliflower, Paneer,...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938915,
+                "categoryId": 2099933,
+                "name": "Aloo Pyaz Paratha",
+                "price": 199.0,
+                "description": "Classic Tawa Paratha Stuffed With Mash Potatoes, Onions And Indian Spi...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938922,
+                "categoryId": 2099933,
+                "name": "Aloo Paratha",
+                "price": 199.0,
+                "description": "Classic Tawa Paratha Stuffed With Mash Potatoes And Indian Spices In H...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938923,
+                "categoryId": 2099933,
+                "name": "Gobi Paratha",
+                "price": 199.0,
+                "description": "Classic Tawa Paratha Stuffed With Mashed Cauiflower And Indian Spices ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938925,
+                "categoryId": 2099933,
+                "name": "Matar Paratha",
+                "price": 199.0,
+                "description": "Classic Tawa Paratha Stuffed With Mashed Peas And Indian Spices In Hom...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938926,
+                "categoryId": 2099933,
+                "name": "Paneer Paratha",
+                "price": 199.0,
+                "description": "Classic Tawa Paratha Stuffed With Mash Paneer And Indian Spices In Hom...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938927,
+                "categoryId": 2099933,
+                "name": "Gobi Pyaz Paratha",
+                "price": 199.0,
+                "description": "Classic Tawa Paratha Stuffed With Mash Cauliflower, Onions And Indian ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099935,
+        "name": "Kake Di Kadhai",
+        "count": 2,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938849,
+                "categoryId": 2099935,
+                "name": "Delhi Style Bedmi Puri With Aloo Ki Sabji [4 Pieces]",
+                "price": 359.0,
+                "description": "Classic Delhi Style Bedmi Puri In Urad Dal And Indian Spice With Aloo ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938850,
+                "categoryId": 2099935,
+                "name": "Chatpat Chole Bhature [2 Pieces]",
+                "price": 359.0,
+                "description": "Bhature 2Pc, Chatpat Chole, Pickle, Green Chutney, Salad",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099936,
+        "name": "Kake Da Meetha",
+        "count": 8,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938873,
+                "categoryId": 2099936,
+                "name": "Kake Dry Fruit Lassi",
+                "price": 289.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938910,
+                "categoryId": 2099936,
+                "name": "Kake Lassi",
+                "price": 219.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938929,
+                "categoryId": 2099936,
+                "name": "Chaas",
+                "price": 179.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938943,
+                "categoryId": 2099936,
+                "name": "Gulab Jamun With Ice Cream [1 Piece]",
+                "price": 129.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938947,
+                "categoryId": 2099936,
+                "name": "Gulab Jamun (2pc)",
+                "price": 99.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938956,
+                "categoryId": 2099936,
+                "name": "Coffee",
+                "price": 69.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938960,
+                "categoryId": 2099936,
+                "name": "Tea",
+                "price": 59.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939027,
+                "categoryId": 2099936,
+                "name": "Gulab Jamun",
+                "price": 189.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099937,
+        "name": "Beverages",
+        "count": 25,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938886,
+                "categoryId": 2099937,
+                "name": "Fresh Mint Shifa Mohito",
+                "price": 289.0,
+                "description": "Lime Juice,  Fresh Mint Leaves, Soda, Sugar",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938962,
+                "categoryId": 2099937,
+                "name": "Clear Bottle Water",
+                "price": 40.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938959,
+                "categoryId": 2099937,
+                "name": "Smart Water",
+                "price": 60.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938948,
+                "categoryId": 2099937,
+                "name": "Cold Drink",
+                "price": 99.0,
+                "description": "Cold Drink With Ice",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938944,
+                "categoryId": 2099937,
+                "name": "Masala Cold Drink",
+                "price": 109.0,
+                "description": "Cold Drink With A Tangy Twist",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938932,
+                "categoryId": 2099937,
+                "name": "Salt Fresh Lime Soda",
+                "price": 179.0,
+                "description": "Soda Mixed With Lemon Extracts And Salt/Sugar",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938931,
+                "categoryId": 2099937,
+                "name": "Sweet Fresh Lime Soda",
+                "price": 179.0,
+                "description": "Soda Mixed With Lemon Extracts And Salt/Sugar",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938930,
+                "categoryId": 2099937,
+                "name": "Buttermilk",
+                "price": 179.0,
+                "description": "Thirst Quenching Yoghurt Drink With Mild Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938928,
+                "categoryId": 2099937,
+                "name": "Mix Fresh Lime Soda",
+                "price": 179.0,
+                "description": "Soda Mixed With Lemon Extracts And Salt/Sugar",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938890,
+                "categoryId": 2099937,
+                "name": "Guava Mary",
+                "price": 289.0,
+                "description": "Fresh Guava Juice, Lime, Soda",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938889,
+                "categoryId": 2099937,
+                "name": "Kala Khatta Mohito [ New Arrival]",
+                "price": 289.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938888,
+                "categoryId": 2099937,
+                "name": "Black Grapes Mohito",
+                "price": 289.0,
+                "description": "Fresh Black Grapes, Lime Juice, And Fresh Mint Leaves",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938887,
+                "categoryId": 2099937,
+                "name": "Orange Mojito",
+                "price": 289.0,
+                "description": "Fresh Orange, Lime Juice, And Fresh Mint Leaves",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938885,
+                "categoryId": 2099937,
+                "name": "Fruit Punch",
+                "price": 289.0,
+                "description": "Orange Juice, Mango Juice, Strawberry Crush, Pineapple Juice, And Fres...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938884,
+                "categoryId": 2099937,
+                "name": "Pina Colada",
+                "price": 289.0,
+                "description": "Coconut Powder, Pineapple, Ice Cream,And Pina Coloda Syrup",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938883,
+                "categoryId": 2099937,
+                "name": "Electric Shock",
+                "price": 289.0,
+                "description": "Mango Juice, Soda Water, Lemon Juice And Blues",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938882,
+                "categoryId": 2099937,
+                "name": "Watermelon Mojito",
+                "price": 289.0,
+                "description": "Fresh Watermelon, Lime Juice, And Fresh Mint Leaves",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938881,
+                "categoryId": 2099937,
+                "name": "Virgin Mojito",
+                "price": 289.0,
+                "description": "Lime, Blueberry Syrup, Sugar, And Fresh Mint",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938880,
+                "categoryId": 2099937,
+                "name": "Cranberry Margarita",
+                "price": 289.0,
+                "description": "Cranberry Flavoured Margarita",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938879,
+                "categoryId": 2099937,
+                "name": "Sexy Sunrise",
+                "price": 289.0,
+                "description": "Orange Juice, Peach Syrup, And Sweet & Sour Mix",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938878,
+                "categoryId": 2099937,
+                "name": "Deep Sea",
+                "price": 289.0,
+                "description": "Pineapple Juice, Orange Juice And Lemon Juice",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938877,
+                "categoryId": 2099937,
+                "name": "Sweet Kiss",
+                "price": 289.0,
+                "description": "Strawberry Crush, Lime Juice Top With Sprite",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938876,
+                "categoryId": 2099937,
+                "name": "Blue Ocean",
+                "price": 289.0,
+                "description": "Sprite, Blue Curacco, And Crushed Ice",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938875,
+                "categoryId": 2099937,
+                "name": "Kake Dry Fruit Lassi",
+                "price": 289.0,
+                "description": "Lassi Topped With Generous Nuts",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938874,
+                "categoryId": 2099937,
+                "name": "Mango Lassi",
+                "price": 289.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099938,
+        "name": "Shakes",
+        "count": 9,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938851,
+                "categoryId": 2099938,
+                "name": "Kitkat Shake [Kids Special Sign]",
+                "price": 339.0,
+                "description": "Kit Kat Bar Blended With Chocolate Ice Cream And Chocolate Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938852,
+                "categoryId": 2099938,
+                "name": "Oreo Shake [Kids Special Sign]",
+                "price": 339.0,
+                "description": "Indulgent Oreo Bliss In A Shake",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938853,
+                "categoryId": 2099938,
+                "name": "Cold Coffee With Vanilla Ice Cream",
+                "price": 339.0,
+                "description": "Frosty Blend Of Rich Coffee, Creamy Milk , Ice Cream And A Hint Of Swe...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938854,
+                "categoryId": 2099938,
+                "name": "Chocolate Shake [Kids Special Sign]",
+                "price": 339.0,
+                "description": "Chocolate Bar Blended With Chocolate Ice Cream And Chocolate Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938855,
+                "categoryId": 2099938,
+                "name": "Mango Shake [Seasosonal]",
+                "price": 339.0,
+                "description": "Refreshing Creamy Drink That Turns Juicy Fresh Mangoes Into A Deliciou...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938856,
+                "categoryId": 2099938,
+                "name": "Vanilla Shake [Kids Special Sign]",
+                "price": 339.0,
+                "description": "Pure Vanila Bliss In A Glass Offering A Timeless Shake Experience",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938865,
+                "categoryId": 2099938,
+                "name": "Cold Coffee",
+                "price": 299.0,
+                "description": "Frosty Blend Of Rich Coffee, Creamy Milk And A Hint Of Sweetness Deliv...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938871,
+                "categoryId": 2099938,
+                "name": "Fresh Cucumber Mojito",
+                "price": 289.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938872,
+                "categoryId": 2099938,
+                "name": "Roseberry",
+                "price": 289.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099939,
+        "name": "Papadum And Salad",
+        "count": 5,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938924,
+                "categoryId": 2099939,
+                "name": "Green Salad",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938949,
+                "categoryId": 2099939,
+                "name": "Fried Masala Papad",
+                "price": 99.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938951,
+                "categoryId": 2099939,
+                "name": "Roasted Masala Papad",
+                "price": 89.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938954,
+                "categoryId": 2099939,
+                "name": "Fried Papad",
+                "price": 79.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938958,
+                "categoryId": 2099939,
+                "name": "Roasted Papad",
+                "price": 69.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099940,
+        "name": "Soups",
+        "count": 8,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938858,
+                "categoryId": 2099940,
+                "name": "Thukpa Soup [Chef Special]",
+                "price": 309.0,
+                "description": "Special Surprise Of North East With Spices And Boiled Noodles",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938859,
+                "categoryId": 2099940,
+                "name": "Thukpa Soup [Spicy]",
+                "price": 309.0,
+                "description": "Spicy Soup With North East Spices And Boiled Noodles",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938868,
+                "categoryId": 2099940,
+                "name": "Veg Clear Soup",
+                "price": 289.0,
+                "description": "Comforting Light Soup Prepared With Seasonal Vegetables",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938869,
+                "categoryId": 2099940,
+                "name": "Hot N Sour Soup",
+                "price": 289.0,
+                "description": "Melange Of Neatly Chopped Veggies That Is  Cooked With Spicy Chilly...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938891,
+                "categoryId": 2099940,
+                "name": "Lemon Coriander Soup",
+                "price": 289.0,
+                "description": "Star Appeitizer Of Vegetables Slimmered In The Veggie Stock With Stron...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938892,
+                "categoryId": 2099940,
+                "name": "Cream Of Tomato Soup",
+                "price": 289.0,
+                "description": "Thick, Tangy, And  Creamy Tomato Soup With Bread Crumbs",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938893,
+                "categoryId": 2099940,
+                "name": "Sweeet Corn Soup",
+                "price": 289.0,
+                "description": "Lightly Spiced Soup With Sweet Corn And Other Veggies",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938894,
+                "categoryId": 2099940,
+                "name": "Manchow Soup",
+                "price": 289.0,
+                "description": "Chinese Soup Cooked In Spices And Herbs  With Veggies",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099941,
+        "name": "Kake Tandoori Starters",
+        "count": 12,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938816,
+                "categoryId": 2099941,
+                "name": "Veg Paneer Kebab",
+                "price": 429.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939021,
+                "categoryId": 2099941,
+                "name": "Paneer Tikka",
+                "price": 449.0,
+                "description": "Cottage Cheese, Onions, Capsicum With Indian Herbs & Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939018,
+                "categoryId": 2099941,
+                "name": "Paneer Haryali Tikka",
+                "price": 449.0,
+                "description": "Basil Pesto Marinated Paneer",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939015,
+                "categoryId": 2099941,
+                "name": "Achari Paneer Tikka",
+                "price": 449.0,
+                "description": "Cottage Cheese Marinated In A Mix Of Classic Pickle Indian Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939012,
+                "categoryId": 2099941,
+                "name": "Makhmali Malai Paneer Tikka",
+                "price": 449.0,
+                "description": "Heavy Cream, Cashew Paste, Ginger And Garlic Paste, And  Curd Marinate...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939009,
+                "categoryId": 2099941,
+                "name": "Soya Tikka",
+                "price": 449.0,
+                "description": "Soya Chap Cooked In Creamy Marination",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939006,
+                "categoryId": 2099941,
+                "name": "Soya Haryali Tikka",
+                "price": 449.0,
+                "description": "Soya With Indian Herbs And Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939003,
+                "categoryId": 2099941,
+                "name": "Soya Malai Tikka",
+                "price": 449.0,
+                "description": "Peri Peri & Basil Pesto Marinated Soya",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939000,
+                "categoryId": 2099941,
+                "name": "Broccoli Malai Tikka",
+                "price": 449.0,
+                "description": "Tandoor Baked Broccoli Marinated With Cream And Cheese",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938994,
+                "categoryId": 2099941,
+                "name": "Tangy Pineapple Tikka",
+                "price": 449.0,
+                "description": "Juicy, Tangy And Delicious?ikka Made By Marinating Pineapple Pieces In...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938988,
+                "categoryId": 2099941,
+                "name": "Chole Kulcha Pockets",
+                "price": 449.0,
+                "description": "Amritsari Chole Stuffed In Kulcha",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938991,
+                "categoryId": 2099941,
+                "name": "Tandoori Stuffed Aloo Tikka",
+                "price": 449.0,
+                "description": "Stuffed Aloo, Cottage Cheese, And Coriander Served With Added Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099942,
+        "name": "Kake Platter",
+        "count": 2,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938800,
+                "categoryId": 2099942,
+                "name": "Assorted Mix Tikka Platter [8 Pieces]",
+                "price": 749.0,
+                "description": "A Platter Of 2Pc Each For Tandoori Stuffed Aloo, Paneer Tikka, Brocoll...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938801,
+                "categoryId": 2099942,
+                "name": "Assorted Paneer Tikka Platter [8 Pieces]",
+                "price": 749.0,
+                "description": "A Platter Of 2Pc Each For Paneer Tikka, Paneer Hariyali Tikka, Paneer ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099943,
+        "name": "Kake Naan Rolls",
+        "count": 4,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938808,
+                "categoryId": 2099943,
+                "name": "Soya Tikka Roll [5 Pieces]",
+                "price": 429.0,
+                "description": "Chunks Of Soya Marinated In Spices And Cooked In Tandoor With Classic ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938809,
+                "categoryId": 2099943,
+                "name": "Mushroom Tikka Roll [5 Pieces]",
+                "price": 429.0,
+                "description": "Mushroom Marinated In Spices Grilled In Tandoor With Classic Butter...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938810,
+                "categoryId": 2099943,
+                "name": "Aloo Tikka Cheese Roll [5 Pcs] [New Arrival-Kids Special]",
+                "price": 429.0,
+                "description": "Soft Potatoes Marinated In Cheese And Spices And Cooked In Tandoor Wit...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938811,
+                "categoryId": 2099943,
+                "name": "Kake Signature Paneer Tikka Roll [5 Pieces]",
+                "price": 429.0,
+                "description": "Chunks Of Paneer Marinated In Spices And Cooked In Tandoor With Classi...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099944,
+        "name": "Kake Chinese Pan",
+        "count": 22,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938840,
+                "categoryId": 2099944,
+                "name": "Aloo Aunty [8 Pieces]",
+                "price": 389.0,
+                "description": "Tangy Masala Stuffing Inside Fried Aloo (8 Pc)",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938913,
+                "categoryId": 2099944,
+                "name": "French Fries [Masala] Kids Special",
+                "price": 209.0,
+                "description": "Thin Strips Of Deep Fried Potato With Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938911,
+                "categoryId": 2099944,
+                "name": "French Fries [Plain] Kids Special",
+                "price": 209.0,
+                "description": "Thin Strips Of Deep Fried Potato",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938861,
+                "categoryId": 2099944,
+                "name": "Crispy Corn Salted Kids Special",
+                "price": 309.0,
+                "description": "Crispy Corn With Salt And Pepper",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938860,
+                "categoryId": 2099944,
+                "name": "Crispy Corn Masala",
+                "price": 309.0,
+                "description": "Crispy Corn With Salt And Pepper With Masala",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938848,
+                "categoryId": 2099944,
+                "name": "Chilli Potato",
+                "price": 369.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938847,
+                "categoryId": 2099944,
+                "name": "Veg Cutlet",
+                "price": 369.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938845,
+                "categoryId": 2099944,
+                "name": "Veg Machurian Gravy",
+                "price": 389.0,
+                "description": "Fried Veggie Balls In A Spicy , Sweet And Tangy Sauce (8Pc/4Pc)",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938844,
+                "categoryId": 2099944,
+                "name": "Chilli Mushroom",
+                "price": 389.0,
+                "description": "Crisp Batter Coated Fried Mushrooms Are Tossed In A Sweet And Spicy Ch...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938843,
+                "categoryId": 2099944,
+                "name": "Veg Machurian Dry",
+                "price": 389.0,
+                "description": "Fried Veggie Balls In A Spicy , Sweet And Tangy Sauce (8Pc/4Pc)",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938842,
+                "categoryId": 2099944,
+                "name": "Honey Chilli Potato",
+                "price": 389.0,
+                "description": "Fried Potato Fingers Tossed In Honey Chilli Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938841,
+                "categoryId": 2099944,
+                "name": "Corn Cheese Balls [8 Pcs]",
+                "price": 389.0,
+                "description": "Cheese Balls With Bread Crumbs Coating And Spicy Masalas (8Pc)",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938839,
+                "categoryId": 2099944,
+                "name": "Crispy Chilli Baby Corn",
+                "price": 389.0,
+                "description": "Ideal Starter Made With Tender Baby Corns In A Chilli Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938838,
+                "categoryId": 2099944,
+                "name": "Gobhi Manchurian",
+                "price": 389.0,
+                "description": "Fried Shredded Gobi Balls In A Spicy, Sweet And Tangy Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938837,
+                "categoryId": 2099944,
+                "name": "Veg Spring Roll [8 Pieces]",
+                "price": 389.0,
+                "description": "Delicious Spring Rolls Are Crunchy From Outside With A Spiced Vegetabl...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938836,
+                "categoryId": 2099944,
+                "name": "Chilli Paneer Gravy",
+                "price": 389.0,
+                "description": "Cottage Cheese Tossed In A Sweet And Sour Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938834,
+                "categoryId": 2099944,
+                "name": "Mushroom Salt And Pepper",
+                "price": 389.0,
+                "description": "Mushrooms Are Saut?d With Salt And Fresh Cracked Pepper",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938833,
+                "categoryId": 2099944,
+                "name": "Chinese Bhel [New Arrival-Kids Special]",
+                "price": 389.0,
+                "description": "Street Style Chinese Bhel Is?picy Crunchy Juicy Noodle Salad Made With...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938832,
+                "categoryId": 2099944,
+                "name": "Lemon Butter Garlic Paneer",
+                "price": 389.0,
+                "description": "Cottage Cheese Cubes Cooked In?arlic?nd?emon?lavoured?auce.",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938831,
+                "categoryId": 2099944,
+                "name": "Exotic Vegetable Saute",
+                "price": 389.0,
+                "description": "Exotic Vegetables Like?ucchini, Broccoli, Baby Corn, Red And Yellow Be...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938829,
+                "categoryId": 2099944,
+                "name": "Chilli Cheese Ball",
+                "price": 389.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938828,
+                "categoryId": 2099944,
+                "name": "Chilli Paneer Dry",
+                "price": 389.0,
+                "description": "Cottage Cheese Tossed In A Sweet And Sour Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099945,
+        "name": "Noodles/Fried Rice",
+        "count": 10,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938820,
+                "categoryId": 2099945,
+                "name": "Mushroom Fried Rice",
+                "price": 399.0,
+                "description": "flavoured rice tossed with mushroom",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938822,
+                "categoryId": 2099945,
+                "name": "Schezawan Noodles",
+                "price": 389.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938823,
+                "categoryId": 2099945,
+                "name": "Paneer Noodles [Kids Special] [ New Arrival]",
+                "price": 389.0,
+                "description": "Noodles, Paneer, Caraway Seeds,Finely Chopped Onions And Capsicums, Se...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938824,
+                "categoryId": 2099945,
+                "name": "Schezawan Fried Rice",
+                "price": 389.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938825,
+                "categoryId": 2099945,
+                "name": "Chilli Garlic Fried Rice",
+                "price": 389.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938826,
+                "categoryId": 2099945,
+                "name": "Veg Fried Rice",
+                "price": 389.0,
+                "description": "Cooked Rice With Finely Chopped Vegetables And Seasoning Ingredients",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938827,
+                "categoryId": 2099945,
+                "name": "Chilli Garlic Noodles",
+                "price": 389.0,
+                "description": "Flavoured Noodles Tossed With Vegetables, Chilli And Garlic",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938830,
+                "categoryId": 2099945,
+                "name": "Veg Hakka Noodles",
+                "price": 389.0,
+                "description": "Flavourful Noodles With Tossed Vegetables And Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938835,
+                "categoryId": 2099945,
+                "name": "Mushroom Fried Noodle",
+                "price": 389.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938862,
+                "categoryId": 2099945,
+                "name": "Paneer Fried Rice [Kids Special]",
+                "price": 309.0,
+                "description": "Rice Tossed With Paneer, Caraway Seeds, Finely Chopped Onions And Caps...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099946,
+        "name": "Kake Tandoori Naans",
+        "count": 21,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938980,
+                "categoryId": 2099946,
+                "name": "Aloo Naan",
+                "price": 249.0,
+                "description": "Stuffing Of Potatos,Ginger,Green Chilli, And Half-Grinded Masala",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938907,
+                "categoryId": 2099946,
+                "name": "Chur Chur Naan [Nikka [Serves 1-2]",
+                "price": 249.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938984,
+                "categoryId": 2099946,
+                "name": "Mooli Naan",
+                "price": 249.0,
+                "description": "Naan Stufffed With Grated Radish",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939080,
+                "categoryId": 2099946,
+                "name": "Matar Paneer Naan",
+                "price": 249.0,
+                "description": "Naan Stuffed With Cottage Cheese And Green Peas",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939084,
+                "categoryId": 2099946,
+                "name": "Chocolate Nutrella Naan [Kids Special]",
+                "price": 249.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939088,
+                "categoryId": 2099946,
+                "name": "Amritsari Kulcha",
+                "price": 269.0,
+                "description": "Naan Stuff With Cottage Cheese,Potatos,Chilli,Coriander And Half-Grind...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939092,
+                "categoryId": 2099946,
+                "name": "Dhuandaar Naan [Spicy]",
+                "price": 269.0,
+                "description": "Organic Yellow Chilli, Cauliflower, Paneer, Potato And Chef\\'S Special...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939156,
+                "categoryId": 2099946,
+                "name": "Matar Aloo Naan",
+                "price": 249.0,
+                "description": "Naan Stuffed With Potatos And Green Peas",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939143,
+                "categoryId": 2099946,
+                "name": "Kandhari Special Naan",
+                "price": 269.0,
+                "description": "Cottage Cheese, Potatoes, Milk, Sugar, Rasins And Cashew Nuts, All In ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939096,
+                "categoryId": 2099946,
+                "name": "Cheese Garlic Naan",
+                "price": 269.0,
+                "description": "Naan With Cheese And Garlic Topping",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939127,
+                "categoryId": 2099946,
+                "name": "Gobhi Naan",
+                "price": 249.0,
+                "description": "Potato And Cauliflower Stuffing In Naan",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939123,
+                "categoryId": 2099946,
+                "name": "Aloo Pyaz Naan",
+                "price": 249.0,
+                "description": "Onion And Potato Stuffing In Naan",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939119,
+                "categoryId": 2099946,
+                "name": "Hariyali Aloo Naan",
+                "price": 249.0,
+                "description": "Naan Stuffed With Potatos,Coriander,Spinach And Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939100,
+                "categoryId": 2099946,
+                "name": "Cheese Capsicum Onion Naan",
+                "price": 269.0,
+                "description": "Procesed Cheese, Bell Peppers, And  Onions In A Naan",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939112,
+                "categoryId": 2099946,
+                "name": "Mix Naan",
+                "price": 269.0,
+                "description": "Mix Of Aloo, Gobi, Paneer",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939108,
+                "categoryId": 2099946,
+                "name": "Pithi Naan",
+                "price": 269.0,
+                "description": "Boiled Lentils, Onion, Coriander, Gree Chilli, Mixed Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939104,
+                "categoryId": 2099946,
+                "name": "Broccoli N Cheese Naan",
+                "price": 269.0,
+                "description": "Naan That Has Finely Chopped Broccoli And Organic Cheese With The Blen...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938964,
+                "categoryId": 2099946,
+                "name": "Hariyali Butter Naan",
+                "price": 249.0,
+                "description": "Coriander, Half Grinded Masalas That Are Perfectly Baked In A Tandoori...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938968,
+                "categoryId": 2099946,
+                "name": "Garlic Butter Naan",
+                "price": 249.0,
+                "description": "Naan With Garlic And Butter-Filled Layers",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938976,
+                "categoryId": 2099946,
+                "name": "Plain Naan [Without Butter]",
+                "price": 209.0,
+                "description": "Coal-Tandoor Baked Naan Without Butter",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938972,
+                "categoryId": 2099946,
+                "name": "Butter Naan",
+                "price": 229.0,
+                "description": "Tandoor Baked Flatbread With Generous Portion Of Butter",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099947,
+        "name": "Kake Tandoori Roti/Paratha",
+        "count": 12,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938934,
+                "categoryId": 2099947,
+                "name": "Hariyali Mirch Paratha",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938935,
+                "categoryId": 2099947,
+                "name": "Missi Pyaz Roti",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938936,
+                "categoryId": 2099947,
+                "name": "Missi Roti",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938937,
+                "categoryId": 2099947,
+                "name": "Makki Roti [Seasonal]",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938938,
+                "categoryId": 2099947,
+                "name": "Haryali Paratha",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938939,
+                "categoryId": 2099947,
+                "name": "Garlic Paratha",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938940,
+                "categoryId": 2099947,
+                "name": "Lal Mirch Paratha",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938941,
+                "categoryId": 2099947,
+                "name": "Ajvain Paratha",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938942,
+                "categoryId": 2099947,
+                "name": "Pudina Paratha",
+                "price": 139.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938945,
+                "categoryId": 2099947,
+                "name": "Lachha Paratha",
+                "price": 109.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938946,
+                "categoryId": 2099947,
+                "name": "Tandoori Butter Roti",
+                "price": 99.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938952,
+                "categoryId": 2099947,
+                "name": "Tandoori Roti",
+                "price": 79.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099948,
+        "name": "Kake Tawa Roti/Paratha",
+        "count": 11,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938896,
+                "categoryId": 2099948,
+                "name": "Kake Special Partha",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938916,
+                "categoryId": 2099948,
+                "name": "Matar Parantha",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938917,
+                "categoryId": 2099948,
+                "name": "Paneer Parantha",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938918,
+                "categoryId": 2099948,
+                "name": "Gobi Pyaz Parantha",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938919,
+                "categoryId": 2099948,
+                "name": "Gobi Parantha",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938920,
+                "categoryId": 2099948,
+                "name": "Aloo Pyaz Parantha",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938921,
+                "categoryId": 2099948,
+                "name": "Aloo Parantha",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938950,
+                "categoryId": 2099948,
+                "name": "Palak Fulka Ghee",
+                "price": 89.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938955,
+                "categoryId": 2099948,
+                "name": "Palak Fulka Plain",
+                "price": 79.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938957,
+                "categoryId": 2099948,
+                "name": "Fulka Ghee",
+                "price": 69.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938961,
+                "categoryId": 2099948,
+                "name": "Fulka Plain",
+                "price": 59.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099949,
+        "name": "Kakes Curries",
+        "count": 29,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40939184,
+                "categoryId": 2099949,
+                "name": "Kashmiri Dum Aloo",
+                "price": 349.0,
+                "description": "Super Delicious Potato Dish That\\'S Bursting With Flavours Cooked In K...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939053,
+                "categoryId": 2099949,
+                "name": "Paneer Do Pyaza",
+                "price": 349.0,
+                "description": "Cottage Cheese That Is Cooked With A Gravy Of Onions And Garnished Wit...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939056,
+                "categoryId": 2099949,
+                "name": "Shahi Malai Paneer",
+                "price": 349.0,
+                "description": "A Tangy And Creamy Tomato Gravy With Paneer And Cashew Nuts",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939059,
+                "categoryId": 2099949,
+                "name": "Dhuandaar Paneer Butter Masala [Spicy]",
+                "price": 349.0,
+                "description": "Paneer Butter Masala With Chef\\'S Special Spicy Touch",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939062,
+                "categoryId": 2099949,
+                "name": "Paneer Butter Masala",
+                "price": 349.0,
+                "description": "A Signature Dish:  Cottage Cheese Cooked In Buttery Spicy Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939065,
+                "categoryId": 2099949,
+                "name": "Kadhai Paneer",
+                "price": 349.0,
+                "description": "Paneer And Bell Pepper Cooked With Spicy Onions, Tomato And Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939068,
+                "categoryId": 2099949,
+                "name": "Rajma",
+                "price": 349.0,
+                "description": "Red Kidney Beans Cooked In A Spicy Indian Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939071,
+                "categoryId": 2099949,
+                "name": "Vegetable Kofta",
+                "price": 349.0,
+                "description": "Dumplings Of Mixed Vegetables In A Exotic, Onion-Tomato Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939190,
+                "categoryId": 2099949,
+                "name": "Veg Jalfrezi",
+                "price": 349.0,
+                "description": "Mixed Veggies, Panner Cooked Together In A Tangy Tomato Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939074,
+                "categoryId": 2099949,
+                "name": "Aloo Jeera Dry",
+                "price": 349.0,
+                "description": "Cumin And Potato Balls Served In Thick Spicy Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939187,
+                "categoryId": 2099949,
+                "name": "Veg Shahi Korma",
+                "price": 349.0,
+                "description": "Rich Cashew Based Paste That Is Subtly Spiced With Aromatic Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939029,
+                "categoryId": 2099949,
+                "name": "Veg Deewani Handi",
+                "price": 379.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939077,
+                "categoryId": 2099949,
+                "name": "Aloo Matar",
+                "price": 349.0,
+                "description": "Fresh Green Peas And Potato Balls Served In Thick Spicy  Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939181,
+                "categoryId": 2099949,
+                "name": "Paneer Lajawab",
+                "price": 349.0,
+                "description": "Its Rich Creamy  Luscious Texture And Aromatic Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939178,
+                "categoryId": 2099949,
+                "name": "Veg Makhanwala",
+                "price": 349.0,
+                "description": "Vegetable Makhanwala?s A Very Rich Butter, Cashew, Onion, Tomato And C...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939116,
+                "categoryId": 2099949,
+                "name": "Sarso Da Saag [Seasonal]",
+                "price": 349.0,
+                "description": "Seasonal Mustard Leaves And Leafy Veggies",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939175,
+                "categoryId": 2099949,
+                "name": "Soya Tikka Masala",
+                "price": 349.0,
+                "description": "Soya Tikka Coated With Tandoori Masala, Served In Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939172,
+                "categoryId": 2099949,
+                "name": "Kaju Masala Gravy",
+                "price": 349.0,
+                "description": "Rich Tangy And Sweet Flavourful Gravy Made With Cashew,Tomatoes Cream ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939160,
+                "categoryId": 2099949,
+                "name": "Methi Matar Malai",
+                "price": 349.0,
+                "description": "Kaju Based Gravy With Rich Cream And Peas",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939169,
+                "categoryId": 2099949,
+                "name": "Makhmali Malai Kofta",
+                "price": 349.0,
+                "description": "Dumpling Balls That Are Served In Thick And Mildly Sweet Creamy Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939166,
+                "categoryId": 2099949,
+                "name": "Makhmali Malai Paneer",
+                "price": 349.0,
+                "description": "Dish Cooked With Heavy Cream, Cashew Powder, Ginger Garlic Paste And...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939163,
+                "categoryId": 2099949,
+                "name": "Makhmali Soya Malai Chaap",
+                "price": 349.0,
+                "description": "Creamy Soya Chaap, Cashew Paste, Coriander, Green Chilli And Black...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939044,
+                "categoryId": 2099949,
+                "name": "Corn Palak",
+                "price": 349.0,
+                "description": "Rich Saucy Dish Made With Fresh Spinach And Sweet Corn",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939050,
+                "categoryId": 2099949,
+                "name": "Paneer Bhurji",
+                "price": 349.0,
+                "description": "Scrambed Indian Cottage Cheese With Onions, Tomatoes And Spices",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939032,
+                "categoryId": 2099949,
+                "name": "Paneer Pasanda",
+                "price": 379.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939041,
+                "categoryId": 2099949,
+                "name": "Matar Paneer",
+                "price": 349.0,
+                "description": "Paneer And Green Peas Cooked In A Spiced Gravy",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939047,
+                "categoryId": 2099949,
+                "name": "Palak Paneer",
+                "price": 349.0,
+                "description": "Shallow Fried Panner Cubes In A Healthy Spanich Gravy And Finely Balan...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939035,
+                "categoryId": 2099949,
+                "name": "Amritsari Chole",
+                "price": 349.0,
+                "description": "Authentic And Delicious Punjabi Style Cooked Chole",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939038,
+                "categoryId": 2099949,
+                "name": "Bhindi Masala Dry",
+                "price": 349.0,
+                "description": "Ladies Finger Cooked With Whole And Ground Spices,Onions And Tomatos",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099950,
+        "name": "Dal",
+        "count": 4,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40939024,
+                "categoryId": 2099950,
+                "name": "Kadhi",
+                "price": 279.0,
+                "description": "Spiced Savoury Tangy Yogurt Sauce",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939147,
+                "categoryId": 2099950,
+                "name": "Palak Dal Tadka",
+                "price": 279.0,
+                "description": "Creamy Preparation Of Yellow Dal With Palak And Tadka",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939150,
+                "categoryId": 2099950,
+                "name": "Dal Tadka",
+                "price": 279.0,
+                "description": "Creamy Preparation Of Yellow Dal With Tadka",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939153,
+                "categoryId": 2099950,
+                "name": "Dal Fry",
+                "price": 279.0,
+                "description": "Lentis Cooked With Spices And Butter",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099951,
+        "name": "Tandoori Handi Special Curries",
+        "count": 4,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40939131,
+                "categoryId": 2099951,
+                "name": "Tandoori Mushroom Masala",
+                "price": 379.0,
+                "description": "Is A Flavorful, Rich, Creamy And Delicious Restaurant Style Curry Made...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939134,
+                "categoryId": 2099951,
+                "name": "Tandoori Veg Kolhapuri",
+                "price": 379.0,
+                "description": "Veg Kolhapuri Is A?elicious Spicy Mixed Vegetables Dish?hich Has Its O...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939137,
+                "categoryId": 2099951,
+                "name": "Tandoori Dal Makhani",
+                "price": 379.0,
+                "description": "Black Daal, Chana Daal, Rajma That Is Cooked In Butter And Cream With ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40939140,
+                "categoryId": 2099951,
+                "name": "Tandoori Paneer Tikka Lababdar",
+                "price": 379.0,
+                "description": "Tandoor Cooked Paneer, Onions, Capsicum With Indian Herbs And Spices M...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099952,
+        "name": "Tandoori Handi Khichdi/ Biryani",
+        "count": 3,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938804,
+                "categoryId": 2099952,
+                "name": "Tandoori Veg Dum Biryani",
+                "price": 449.0,
+                "description": "Rice Dish With Smoky Flavour Cooked With Indian Spices, Vegetables Gra...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938817,
+                "categoryId": 2099952,
+                "name": "Palak Dal Khichdi",
+                "price": 429.0,
+                "description": "Palak Khichdi Made Of Lentils, Rice, And Spinach. This Gluten-Free Dis...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938818,
+                "categoryId": 2099952,
+                "name": "Dal Khichdi",
+                "price": 409.0,
+                "description": "Humble Dal Khichdi Recipe Is A?ight Indian Dish Made With Rice And Moo...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099953,
+        "name": "Rice/Pulao",
+        "count": 7,
+        "imageUrl": "https://cdn.uengage.io/uploads/59827/image-3724-1745238744.jpg",
+        "products": [
+            {
+                "id": 40938819,
+                "categoryId": 2099953,
+                "name": "Mix Veg Pulao",
+                "price": 399.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938821,
+                "categoryId": 2099953,
+                "name": "Shahi Pulao",
+                "price": 399.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938864,
+                "categoryId": 2099953,
+                "name": "Curd Rice",
+                "price": 299.0,
+                "description": "Curd Rice?s A South Indian Traditional Dish Made With Rice, Fresh Yogu...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938867,
+                "categoryId": 2099953,
+                "name": "Matar Pulao",
+                "price": 299.0,
+                "description": "Basmati Rice Cooked With Green Peas And Added Ghee",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938908,
+                "categoryId": 2099953,
+                "name": "Jeera Pulao",
+                "price": 229.0,
+                "description": "Basmati Rice Cooked With Cumin Seeds And Added Ghee",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938909,
+                "categoryId": 2099953,
+                "name": "Ghee Rice",
+                "price": 229.0,
+                "description": "Steamed Rice With Ghee",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938912,
+                "categoryId": 2099953,
+                "name": "Plain Rice",
+                "price": 209.0,
+                "description": "Plain Basmati Rice",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099954,
+        "name": "Raita",
+        "count": 5,
+        "imageUrl": "https://cdn.uengage.io/uploads/59827/image-6133-1745238737.jpg",
+        "products": [
+            {
+                "id": 40938899,
+                "categoryId": 2099954,
+                "name": "Mix Veg Raita",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938900,
+                "categoryId": 2099954,
+                "name": "Pineapple Raita",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938914,
+                "categoryId": 2099954,
+                "name": "Boondi Raita",
+                "price": 199.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938933,
+                "categoryId": 2099954,
+                "name": "Kheera Raita",
+                "price": 169.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938953,
+                "categoryId": 2099954,
+                "name": "Plain Curd",
+                "price": 79.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099955,
+        "name": "Desserts",
+        "count": 13,
+        "imageUrl": "https://cdn.uengage.io/uploads/59827/image-2573-1745238688.jpeg",
+        "products": [
+            {
+                "id": 40938846,
+                "categoryId": 2099955,
+                "name": "Sizzling Walnut Brownie With Vanilla Ice Cream",
+                "price": 369.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938863,
+                "categoryId": 2099955,
+                "name": "Kesar Kulfi With Falooda",
+                "price": 299.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938866,
+                "categoryId": 2099955,
+                "name": "Kesar Kulfi Without Falooda",
+                "price": 299.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938870,
+                "categoryId": 2099955,
+                "name": "Gajar Ka Halwa",
+                "price": 289.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938895,
+                "categoryId": 2099955,
+                "name": "Chikoo Ice Cream",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938897,
+                "categoryId": 2099955,
+                "name": "Mango Ice Cram",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938898,
+                "categoryId": 2099955,
+                "name": "Gulqand Ice Cream",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938901,
+                "categoryId": 2099955,
+                "name": "Rabri",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938902,
+                "categoryId": 2099955,
+                "name": "Shahi Tukda",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938903,
+                "categoryId": 2099955,
+                "name": "Choice Of Icecream",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938904,
+                "categoryId": 2099955,
+                "name": "Mysore Paak Ice Cream",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938905,
+                "categoryId": 2099955,
+                "name": "Guava Ice Cream",
+                "price": 259.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938997,
+                "categoryId": 2099955,
+                "name": "Gulab Jamun With Vanilla Ice Cream",
+                "price": 129.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099956,
+        "name": "Kdh Thali [Monday-Friday]",
+        "count": 3,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938802,
+                "categoryId": 2099956,
+                "name": "Kake Special Thali",
+                "price": 529.0,
+                "description": "Amritsari Naan (Nikka)/ Dhuandaar Naan (Nikka), Tandoori Dal Makhani, ...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938815,
+                "categoryId": 2099956,
+                "name": "Kake Thali",
+                "price": 429.0,
+                "description": "1Pc Butter Naan (Nikka)/ Garlic Butter Naan (Nikka), Tandoori Dal Makh...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938857,
+                "categoryId": 2099956,
+                "name": "Kake Mini Thali",
+                "price": 329.0,
+                "description": "Dal Fry, Aloo Jeera, 1Lachha Paratha/ Butter Roti/, Plain Rice, Roaste...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099957,
+        "name": "Kdh Chinese Combo",
+        "count": 2,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938805,
+                "categoryId": 2099957,
+                "name": "Chinese Combo 2",
+                "price": 449.0,
+                "description": "Veg Manchurian With Veg Fried Rice/Noodles",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            },
+            {
+                "id": 40938806,
+                "categoryId": 2099957,
+                "name": "Chinese Combo 1",
+                "price": 449.0,
+                "description": "Chilly Paneer With Veg Fried Rice/Noodles",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099958,
+        "name": "Kdh Indian Combo",
+        "count": 1,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938803,
+                "categoryId": 2099958,
+                "name": "Chole Bhature Combo",
+                "price": 449.0,
+                "description": "Bhature 2Pc, Chatpat Chole, Pickle, Green Chutney, Lassi, Gulab Jamun(...Read more",
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2099959,
+        "name": "Others",
+        "count": 1,
+        "imageUrl": "https://www.uengage.in/images/addo/logos/logo-59827-1744889407.jpeg",
+        "grayscale": true,
+        "products": [
+            {
+                "id": 40938963,
+                "categoryId": 2099959,
+                "name": "Parcel Charge",
+                "price": 20.0,
+                "availableTime": "Next available at 12:00 PM",
+                "isVeg": true,
+                "isAvailable": true
+            }
+        ]
+    }
+]

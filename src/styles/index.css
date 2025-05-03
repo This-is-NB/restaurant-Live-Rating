@@ -1,0 +1,68 @@
+/* src/styles/index.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Ensure full viewport coverage */
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    /* padding: 20px; */
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  /* Custom Styles for Layout */
+  .container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .article-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .article {
+    width: 65%;
+  }
+  
+  .sidebar {
+    width: 30%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add more specific styles here */
+  
