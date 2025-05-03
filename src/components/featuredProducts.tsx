@@ -1,22 +1,28 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 
 interface Product {
-  id: number;
-  categoryId: number;
-  name: string;
-  price: number;
-  description: string;
-  isVeg: boolean;
-  isAvailable: boolean;
-  availableTime?: string;
-}
+    id: number;
+    categoryId: number;
+    name: string;
+    price: number;
+    description: string;
+    isVeg: boolean;
+    isAvailable: boolean;
+    availableTime?: string;
+    likes?: number;
+    dislikes?: number;
+  }
 
 interface FeaturedProductsProps {
   categoryName: string;
   products: Product[];
+  votes: Record<number, { likes: number; dislikes: number }>;
 }
 
-const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, products }) => {
+
+
+const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, products, votes }) => {
   const [quantities, setQuantities] = useState<Record<number, number>>({});
 
   const handleAddClick = (productId: number) => {
@@ -47,6 +53,9 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, produ
     // Implementation for opening variant modal
     console.log(`Opening variant modal for product ${productId}`);
   };
+
+
+
 
   return (
     <div className="page-section top_activ_elem" id={categoryName.replace(/\s+/g, '-').toLowerCase()}>
@@ -146,6 +155,14 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, produ
                         ></div>
                       </div>
                     </div>
+                  <div className="vote-section mt-2">
+                    <span style={{ color: 'green', marginRight: '10px' }}>
+                        👍 {votes[product.id]?.likes || 0}
+                    </span>
+                    <span style={{ color: 'red' }}>
+                        👎 {votes[product.id]?.dislikes || 0}
+                    </span>
+                  </div>  
                   </div>
                   
                   {!product.isAvailable && (

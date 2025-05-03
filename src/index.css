@@ -630,4 +630,12 @@ span.heading-1 {
     /* filter: grayscale(100%); */
 }
 
+.item-card-placeholder-detail-new.item-without-img-detail {
+    min-width: auto;
+    -ms-flex: 0 0 35%;
+    flex: 0 0 35%;
+    flex-direction: column;
+    max-width: 35%;
+}
+
 /* ... (rest of your CSS if any) ... */

@@ -9,6 +9,8 @@ interface Product {
   isVeg: boolean;
   isAvailable: boolean;
   availableTime?: string;
+  likes?: number;
+  dislikes?: number;
 }
 
 interface MenuCategory {
@@ -21,13 +23,15 @@ interface MenuCategory {
   products: Product[];
 }
 
-const MenuCategories: React.FC = () => {
-  //import from ./Menu.json
-  const categories: MenuCategory[] = require('../python-scripts/Menu.json');
+interface MenuCategoriesProps {
+  categories: MenuCategory[];
+  onCategoryClick?: (categoryId: string) => void;
+}
 
-  const scrollToSection = (id: number) => {
-    // Implementation for scrolling to section
-    console.log(`Scrolling to section ${id}`);
+const MenuCategories: React.FC<MenuCategoriesProps> = ({ categories, onCategoryClick }) => {
+  const scrollToSection = (name: string) => {
+    if (onCategoryClick) onCategoryClick(name);
+    else console.log(`Scrolling to section ${name}`);
   };
 
   return (
@@ -36,7 +40,7 @@ const MenuCategories: React.FC = () => {
         <div key={category.id} className="sub-part-outer">
           <a
             className={`subcategories ${category.isActive ? 'active' : ''}`}
-            onClick={() => scrollToSection(category.id)}
+            onClick={() => scrollToSection(category.name)}
             id={`${category.id}-li`}
           >
             <div className="overlay-tp-hd"></div>
