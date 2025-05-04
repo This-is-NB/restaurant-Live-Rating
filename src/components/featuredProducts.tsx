@@ -22,14 +22,63 @@ interface Product {
     onRemoveFromCart: (productId: number) => void;
     onLike: (productId: number) => void;         // <-- Add this
     onDislike: (productId: number) => void;  
+    chatMessages: { user: string; comment: string; items: string[] }[];
   }
 
 
+  const ReviewsModal: React.FC<{
+    show: boolean;
+    onClose: () => void;
+    productName: string;
+    reviews: { user: string; comment: string; items: string[] }[];
+  }> = ({ show, onClose, productName, reviews }) => {
+    if (!show) return null;
+    return (
+      <div className="modal-backdrop" style={{
+        position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
+        background: 'rgba(0,0,0,0.4)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center'
+      }}>
+        <div className="modal-content" style={{
+          background: '#fff', borderRadius: 8, padding: 24, minWidth: 320, maxWidth: 400, maxHeight: 500, overflowY: 'auto', position: 'relative'
+        }}>
+          <button onClick={onClose} style={{
+            position: 'absolute', top: 5, right: 5, background: 'none', border: 'none', cursor: 'pointer', padding: 0
+          }} aria-label="Close">
+            <i className='la la-close' style={{ fontSize: 20, color: '#DA251C' }}></i>
+            </button>
+          <h4 style={{ marginBottom: 16 }}>Recent Reviews for <br/><span style={{ color: '#DA251C' }}>{productName}</span></h4>
+          {reviews.length === 0 ? (
+            <div style={{ color: '#888', fontSize: 14 }}>No reviews yet for this item.</div>
+          ) : (
+            <ul style={{ padding: 0, listStyle: 'none', margin: 0 }}>
+              {reviews.map((r, idx) => (
+                <li key={idx} style={{ borderBottom: '1px solid #eee', marginBottom: 10, paddingBottom: 8 }}>
+                  <div style={{ fontWeight: 500, fontSize: 13 , color: 'blue' , fontStyle:'italic'}}><i className='la la-user-circle' style={{ marginRight: 2}}></i>{r.user}</div>
+                  <div style={{ fontSize: 13, color: "#444" }}>{r.comment}</div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    );
+  };
 
-const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, products, votes, onAddToCart, cart, onRemoveFromCart , onLike, onDislike}) => {
+
+
+const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, products, votes, onAddToCart, cart, onRemoveFromCart , onLike, onDislike, chatMessages = []}) => {
 //   const [quantities, setQuantities] = useState<Record<number, number>>({});
 
 const [animating, setAnimating] = useState<{ [id: number]: 'like' | 'dislike' | null }>({});
+  // Modal state
+  const [showReviewsModal, setShowReviewsModal] = useState(false);
+  const [modalProduct, setModalProduct] = useState<Product | null>(null);
+
+  // Handler to open modal and filter reviews for the product
+  const handleSeeReviews = (product: Product) => {
+    setModalProduct(product);
+    setShowReviewsModal(true);
+  };
 
   const handleLikeClick = (productId: number) => {
     setAnimating(a => ({ ...a, [productId]: 'like' }));
@@ -84,6 +133,16 @@ const [animating, setAnimating] = useState<{ [id: number]: 'like' | 'dislike' | 
 
   return (
     <div className="page-section top_activ_elem" id={categoryName.replace(/\s+/g, '-').toLowerCase()}>
+      <ReviewsModal
+        show={showReviewsModal}
+        onClose={() => setShowReviewsModal(false)}
+        productName={modalProduct?.name || ''}
+        reviews={
+          chatMessages.filter(
+            m => modalProduct && m.items.some(item => item.toLowerCase().includes(modalProduct.name.toLowerCase()))
+          )
+        }
+      />
       <h3 className="wla-outlet-name-md-two w-100 common-heading mb-0">
         <span>{categoryName}</span>
       </h3>
@@ -110,6 +169,12 @@ const [animating, setAnimating] = useState<{ [id: number]: 'like' | 'dislike' | 
                         >
                           <span></span>
                         </div>
+                        <span
+                          style={{color: '#007bff', textDecoration: 'underline', background: 'none', border: 'none', marginLeft: 8, cursor: 'pointer',padding: 0}}
+                          onClick={() => handleSeeReviews(product)}
+                        >
+                          See recent reviews
+                        </span>
                       </div>
                       
                       <div 

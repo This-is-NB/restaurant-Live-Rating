@@ -42,12 +42,27 @@ const OrderingPage: React.FC = () => {
   const [cartTotal, setCartTotal] = useState(0);
   const [sortType, setSortType] = useState<'customer-favorites' | 'price-low' | 'price-high'>('customer-favorites');
   const [liveRating, setLiveRating] = useState(true);
-  const [catagorize, setCatagorize] = useState(false);
+  const [catagorize, setCatagorize] = useState(true);
   const [alertMsg, setAlertMsg] = useState<string | null>(null);
   const [showSearch, setShowSearch] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-
-
+  const [chatMessages, setChatMessages] = useState<{ user: string; comment: string; items: string[] }[]>([]);
+  const [votes, setVotes] = useState<Record<number, { likes: number; dislikes: number }>>(() => {
+    const initialVotes: Record<number, { likes: number; dislikes: number }> = {};
+    menu.forEach(category => {
+      category.products.forEach(product => {
+        if(category.products.length > 5) {
+          initialVotes[product.id] = { likes: Math.floor(Math.random() * 10), dislikes: Math.floor(Math.random() * 10) };
+        }else{
+          initialVotes[product.id] = { likes: 0, dislikes: 0 };
+        }
+      });
+    });
+    return initialVotes;
+  });
+  
+  
+  
   
   const handleAddToCart = (productId: number) => {
     console.log("add to cart ", productId);
@@ -183,15 +198,6 @@ const OrderingPage: React.FC = () => {
     // Additional logic for setting order type
   };
 
-  const [votes, setVotes] = useState<Record<number, { likes: number; dislikes: number }>>(() => {
-    const initialVotes: Record<number, { likes: number; dislikes: number }> = {};
-    menu.forEach(category => {
-      category.products.forEach(product => {
-        initialVotes[product.id] = { likes: 0, dislikes: 0 };
-      });
-    });
-    return initialVotes;
-  });
     // products.forEach(product => {
     //   initialVotes[product.id] = { likes: 0, dislikes: 0 };
     // });
@@ -582,6 +588,7 @@ function wilsonScore(likes: number, dislikes: number): number {
                     cart={cart}
                     onLike={handleLike}
                     onDislike={handleDislike}
+                    chatMessages={chatMessages}
                     />
                 ))}
                 </div>
@@ -615,6 +622,8 @@ function wilsonScore(likes: number, dislikes: number): number {
                 cartTotal={cartTotal}
                 onIncrease={handleAddToCart}
                 onDecrease={handleRemoveFromCart}
+                chatMessages={chatMessages} // <-- pass chat messages
+                setChatMessages={setChatMessages} 
           />
 
         </div>

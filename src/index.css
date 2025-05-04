@@ -710,7 +710,7 @@ animation: flyDown 0.7s forwards;
 
 
 .cart-items-outer-main {
-    max-height: 250px;
+    max-height: 150px;
     overflow: hidden;
     overflow-y: auto;
     padding-right: 5px;
@@ -762,5 +762,100 @@ animation: flyDown 0.7s forwards;
     }
     .modal-body {
       padding: 10px !important;
+    }
+  }
+
+
+  /* Chatbox styles for CartSidebar */
+  .cart-chatbox {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    max-height: 220px;
+    overflow-y: auto;
+    margin-top: 16px;
+  }
+  
+  .cart-chatbox h5 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .cart-chatbox .chat-messages-list {
+    max-height: 100px;
+    overflow-y: auto;
+    margin-bottom: 8px;
+  }
+  
+  .cart-chatbox .chat-empty-msg {
+    color: #aaa;
+    font-size: 13px;
+  }
+  
+  .cart-chatbox .chat-message {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+  }
+  
+  .cart-chatbox .chat-message .user {
+    font-weight: 500;
+    font-size: 13px;
+  }
+  
+  .cart-chatbox .chat-message .comment {
+    font-size: 13px;
+    color: #444;
+  }
+  
+  .cart-chatbox .chat-message .items {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .cart-chatbox .chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .cart-chatbox input[type="text"],
+  .cart-chatbox textarea {
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  
+  .cart-chatbox textarea {
+    resize: none;
+  }
+  
+  .cart-chatbox button[type="submit"] {
+    align-self: center;
+    font-size: 13px;
+    padding: 2px 12px;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    transition: background 0.2s;
+  }
+  
+  .cart-chatbox button[type="submit"]:hover {
+    background: #0056b3;
+  }
+  
+  @media (max-width: 767px) {
+    .cart-chatbox {
+      max-height: 180px;
+      padding: 8px;
+    }
+    .cart-chatbox h5 {
+      font-size: 14px;
     }
   }
