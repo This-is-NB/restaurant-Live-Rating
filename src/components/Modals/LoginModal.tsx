@@ -25,6 +25,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ show, setShow, onSendOtp, error
 
   return (
     <div className="modal modal-top fade show" tabIndex={-1} style={{display: "block", background: "rgba(0,0,0,0.3)"}}>
+      HETTTTTTTTTTTT
       <div className="modal-dialog modal-content" style={{maxWidth: 400, margin: "2rem auto", padding: 20, top: 0, left: '40%'}}>
         <div className="d-flex xross padding-20 z-index-3"  style={{position: "absolute", right: 5, top: 5}}>
           <button

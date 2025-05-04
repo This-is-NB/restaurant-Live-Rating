@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   const handleNavToggle = () => setNavOpen((prev) => !prev);
   const handleSideNavOpen = () => setSideNavOpen(true);
   const handleSideNavClose = () => setSideNavOpen(false);
-
+  
   // Logout handler (replace with your logic)
   const handleLogout = (e: React.MouseEvent) => {
     e.preventDefault();
