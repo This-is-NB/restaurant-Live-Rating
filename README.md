@@ -1,6 +1,6 @@
 # Kake Di Hatti Clone – Level Up: Vibe Coding Hackathon Submission
 
-This project was created for the **Level Up: Vibe Coding Hackathon**.
+This project was created for the [**Level Up: Vibe Coding Hackathon**](https://lu.ma/6xqkxrzh?locale=en-GB&tk=3ZCOyF).
 
 ---
 
@@ -70,7 +70,7 @@ Menus change daily, and what was tasty yesterday might not be great today. Most 
 
 - **Simulated Live Activity:**  
   Since there’s no backend, the app simulates 50 users who periodically like/dislike and review random food items. This gives a realistic preview of how the live features would feel in a real-world, high-traffic environment.
-  
+
 - **Live Chatbox & Reviews:**  
   Users can leave quick reviews for the items they ordered, and see what others are saying right now. Each food item displays only recent reviews for *today*, so you always know what’s trending and what to avoid.
 
