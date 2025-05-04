@@ -4,7 +4,7 @@ This project was created for the [**Level Up: Vibe Coding Hackathon**](https://l
 
 ---
 
-## 💡 About the Hackathon
+### 💡 About the Hackathon
 
 Ever used a website and thought, “This could be so much better?”  
 Now’s your chance to prove it.
@@ -120,12 +120,6 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
----
-
-## 📸 Screenshots
-
-*(Add screenshots here if desired)*
 
 ---
 
