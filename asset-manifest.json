@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/restaurant-Live-Rating/static/css/main.5605f87d.css",
+    "main.js": "/restaurant-Live-Rating/static/js/main.0cf9c15d.js",
+    "static/js/453.503914dd.chunk.js": "/restaurant-Live-Rating/static/js/453.503914dd.chunk.js",
+    "static/media/fooddelivery.png": "/restaurant-Live-Rating/static/media/fooddelivery.e0909eca427e93097cb6.png",
+    "index.html": "/restaurant-Live-Rating/index.html",
+    "main.5605f87d.css.map": "/restaurant-Live-Rating/static/css/main.5605f87d.css.map",
+    "main.0cf9c15d.js.map": "/restaurant-Live-Rating/static/js/main.0cf9c15d.js.map",
+    "453.503914dd.chunk.js.map": "/restaurant-Live-Rating/static/js/453.503914dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5605f87d.css",
+    "static/js/main.0cf9c15d.js"
+  ]
+}
