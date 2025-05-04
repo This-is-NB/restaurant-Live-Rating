@@ -1,11 +1,8 @@
-import React, { useState , useEffect} from 'react';
-import MenuCategories from './MenuCategories';
-// import food_deliverySrc from '/assets/food_delivery.png';
+import React, { useState , useEffect, useMemo, useCallback} from 'react';
 import food_deliverySrc from '../assets/fooddelivery.png';
 import FeaturedProducts from './featuredProducts';
 import SidebarMenu from './sidebarMenu';
 import CartSidebar from './cart';
-import { log } from 'console';
 import SearchModal from './Modals/SearchModal';
 import LoginModal from './Modals/LoginModal';
 
@@ -29,6 +26,16 @@ interface Product {
     grayscale?: boolean;
     products: Product[];
   }
+
+function wilsonScore(likes: number, dislikes: number): number {
+  const n = likes + dislikes;
+  if (n === 0) return 0;
+  const z = 1.96; // 95% confidence
+  const p = likes / n;
+  const score = (p + z*z/(2*n) - z * Math.sqrt((p*(1 - p) + z*z/(4*n)) / n)) / (1 + z*z/n);
+  return score;
+}
+
   
 
 
@@ -36,13 +43,13 @@ interface Product {
 const OrderingPage: React.FC = () => {
   const [isClosed, setIsClosed] = useState(false);
   const [orderType, setOrderType] = useState<number>(1); // Default to Delivery
-  let menu: MenuCategory[] = require('../python-scripts/Menu.json');
-  const products : Product[] = menu.flatMap(category => category.products);
+  const menu: MenuCategory[] = useMemo(() => require('../python-scripts/Menu.json'), []);
+  const products: Product[] = useMemo(() => menu.flatMap(category => category.products), [menu]);
   const [cart, setCart] = useState<Record<number, { product: Product; quantity: number }>>({});
   const [cartTotal, setCartTotal] = useState(0);
   const [sortType, setSortType] = useState<'customer-favorites' | 'price-low' | 'price-high'>('customer-favorites');
   const [liveRating, setLiveRating] = useState(true);
-  const [catagorize, setCatagorize] = useState(true);
+  const [categorize, setCategorize] = useState(true);
   const [alertMsg, setAlertMsg] = useState<string | null>(null);
   const [showSearch, setShowSearch] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -63,36 +70,31 @@ const OrderingPage: React.FC = () => {
   
   
   
-  
-  const handleAddToCart = (productId: number) => {
+  const handleAddToCart = useCallback((productId: number) => {
     setCart(prev => {
       const newCart = { ...prev };
       if (newCart[productId]) {
         newCart[productId].quantity += 1;
-      }else{
+      } else {
         const product = products.find(p => p.id === productId);
-        if (product) {
-          newCart[productId] = { product, quantity: 1 };
-        }
+        if (product) newCart[productId] = { product, quantity: 1 };
       }
       return newCart;
     });
-  };
+  }, [products]);
 
-
-  const handleRemoveFromCart = (productId: number) => {
+  const handleRemoveFromCart = useCallback((productId: number) => {
     setCart(prev => {
       const newCart = { ...prev };
-        if (newCart[productId]) {
-            newCart[productId].quantity -= 1;
-            if (newCart[productId].quantity <= 0) {
-            delete newCart[productId];
-            }
-        }
+      if (newCart[productId]) {
+        newCart[productId].quantity -= 1;
+        if (newCart[productId].quantity <= 0) delete newCart[productId];
+      }
       return newCart;
     });
-  };
-  const handleLike = (productId: number) => {
+  }, []);
+
+  const handleLike = useCallback((productId: number) => {
     setVotes(prev => ({
       ...prev,
       [productId]: {
@@ -100,9 +102,9 @@ const OrderingPage: React.FC = () => {
         likes: (prev[productId]?.likes || 0) + 1
       }
     }));
-  };
-  
-  const handleDislike = (productId: number) => {
+  }, []);
+
+  const handleDislike = useCallback((productId: number) => {
     setVotes(prev => ({
       ...prev,
       [productId]: {
@@ -110,70 +112,51 @@ const OrderingPage: React.FC = () => {
         dislikes: (prev[productId]?.dislikes || 0) + 1
       }
     }));
-  };
+  }, []);
 
-  function sortMenu(menu: MenuCategory[], votes: Record<number, { likes: number; dislikes: number }>, sortType: string) {
-    let sortedMenu = !catagorize  ? 
-    [{ id: 0, name: "All Items", count: 0, imageUrl: "", products: menu.flatMap(category => category.products) }] 
-    : menu.map(category => ({
-      ...category,
-      products: [...category.products]
-    }));
+  const sortMenu = useCallback((menu: MenuCategory[], votes: Record<number, { likes: number; dislikes: number }>, sortType: string) => {
+    let sortedMenu = !categorize
+      ? [{ id: 0, name: "All Items", count: 0, imageUrl: "", products: menu.flatMap(category => category.products) }]
+      : menu.map(category => ({
+        ...category,
+        products: [...category.products]
+      }));
 
-  
     if (sortType === 'customer-favorites') {
       sortedMenu.forEach(category => {
         category.products.sort((a, b) => {
           const aVotes = votes[a.id] || { likes: 0, dislikes: 0 };
           const bVotes = votes[b.id] || { likes: 0, dislikes: 0 };
-          const aScore = wilsonScore(aVotes.likes, aVotes.dislikes);
-          const bScore = wilsonScore(bVotes.likes, bVotes.dislikes);
-          return bScore - aScore;
+          return wilsonScore(bVotes.likes, bVotes.dislikes) - wilsonScore(aVotes.likes, aVotes.dislikes);
         });
       });
 
       sortedMenu.sort((a, b) => {
         const weightedScore = (category: MenuCategory) => {
-            let totalScore = 0;
-            let totalVotes = 0;
-
-            for (const product of category.products) {
-                const { likes = 0, dislikes = 0 } = votes[product.id] || {};
-                const n = likes + dislikes;
-                const score = wilsonScore(likes, dislikes);
-                totalScore += score * n;
-                totalVotes += n;
-            }
-
-            return totalVotes === 0 ? 0 : totalScore / totalVotes;
+          let totalScore = 0, totalVotes = 0;
+          for (const product of category.products) {
+            const { likes = 0, dislikes = 0 } = votes[product.id] || {};
+            const n = likes + dislikes;
+            totalScore += wilsonScore(likes, dislikes) * n;
+            totalVotes += n;
+          }
+          return totalVotes === 0 ? 0 : totalScore / totalVotes;
         };
-
-        const aScore = weightedScore(a);
-        const bScore = weightedScore(b);
-
-        return bScore - aScore;
+        return weightedScore(b) - weightedScore(a);
       });
-    }else{
-      if(catagorize) {
-        setCatagorize(false);
+    } else {
+      if (categorize) {
+        setCategorize(false);
         sortedMenu = [{ id: 0, name: "All Items", count: 0, imageUrl: "", products: menu.flatMap(category => category.products) }];
       }
-  
-      if(sortType === 'price-low') {
+      if (sortType === 'price-low') {
         sortedMenu[0].products.sort((a, b) => a.price - b.price);
-      }
-      else if(sortType === 'price-high') {
+      } else if (sortType === 'price-high') {
         sortedMenu[0].products.sort((a, b) => b.price - a.price);
       }
     }
-
-    
     return sortedMenu;
-
-
-  }
-
-
+  }, [categorize]);
 
   useEffect(() => {
     const total = Object.values(cart).reduce((sum, item) => sum + item.product.price * item.quantity, 0);
@@ -187,33 +170,8 @@ const OrderingPage: React.FC = () => {
     }
   }, [alertMsg]);
 
-
-
-  const handleCheckOut = () => {
-    // Checkout logic here
-    setShowLogin(true);
-  };
-
-  const handleSetOrderType = (type: number, element: any) => {
-    setOrderType(type);
-    // Additional logic for setting order type
-  };
-
-    // products.forEach(product => {
-    //   initialVotes[product.id] = { likes: 0, dislikes: 0 };
-    // });
-    // return initialVotes;
-//   });
-
-function wilsonScore(likes: number, dislikes: number): number {
-    const n = likes + dislikes;
-    if (n === 0) return 0;
-    const z = 1.96; // 95% confidence
-    const p = likes / n;
-    const score = (p + z*z/(2*n) - z * Math.sqrt((p*(1 - p) + z*z/(4*n)) / n)) / (1 + z*z/n);
-    return score;
-}
-
+  const handleCheckOut = useCallback(() => setShowLogin(true), []);
+  const handleSetOrderType = useCallback((type: number, element: any) => setOrderType(type), []);
 
 useEffect(() => {
   const users = Array.from({ length: 50 }, (_, i) => `user_${i + 1}`);
@@ -272,7 +230,7 @@ useEffect(() => {
               menu={menu} 
               isClosed={isClosed} 
               handleCheckOut={handleCheckOut} 
-              setCatagorize={setCatagorize}
+              setCategorize={setCategorize}
             />
           
             
@@ -545,21 +503,20 @@ useEffect(() => {
                   checked={liveRating}
                   onChange={e => {
                     setLiveRating(e.target.checked);
-                    setAlertMsg(e.target.checked ? 'Live rating enabled' : 'Live rating disabled');
+                    setAlertMsg(e.target.checked ? 'Live rating & Comments enabled' : 'Live rating & Comments disabled');
                   }}
                   style={{accentColor: "#28a745"}}
                 />
                 <label htmlFor="live-rating" title="When enabled, product ratings will update automatically every 5 seconds with simulated user votes." style={{marginBottom: 0, fontSize: 15, cursor: "pointer"}}>
                   <span style={{color: "#28a745", fontWeight: 500}}>Live</span>
-                  {/* <span className="d-none d-md-inline" style={{color: "#888", marginLeft: 4, fontWeight: 400, fontSize: 14}}>rating update</span> */}
                 </label>
               </div>
               <div className="d-flex align-items-center" style={{gap: 6}}>
                 <input
                   type="checkbox"
                   id="categorize"
-                  checked={catagorize}
-                  onChange={e => setCatagorize(e.target.checked)}
+                  checked={categorize}
+                  onChange={e => setCategorize(e.target.checked)}
                   style={{ accentColor: "#007bff"}}
                 />
                 <label htmlFor="categorize" title="When enabled, all items will be displayed in separate categories." style={{marginBottom: 0, fontSize: 15, cursor: "pointer"}}>
@@ -569,14 +526,6 @@ useEffect(() => {
             </div>
             
             <div className="mid-section" data-offset="0">
-                {/* <div id="featuredProducts">
-                <h3 className="common-heading"><span>Featured Items</span></h3>
-                    <div className="coupon-outer">
-                        <div className="common-coupen pt-0" id="featuredList">
-
-                        </div>
-                    </div>
-                </div> */}
 
                 <div id="productList">
                 {sortMenu(menu, votes, sortType).map((category) => (

@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState , useEffect, useCallback, useMemo} from 'react';
 import menuData from '../python-scripts/Menu.json';
 import { useRef } from 'react';
 
@@ -18,10 +18,8 @@ interface CartSidebarProps {
   }
 
 // Utility to get random int in range
-function getRandomInt(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
+const getRandomInt = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
 // Example user names and comments
 const randomUsers = [
   "Ghansham", "Rahul", "Priya", "Aman", "Simran", "Rohit", "Neha", "Vikas", "Anjali", "Deepak",
@@ -48,27 +46,37 @@ const randomComments = [
 
 const allProducts = menuData.flatMap((cat: any) => cat.products);
 
-const getRandomItems = () => {
+function getRandomItems() {
   const count = getRandomInt(1, 3);
-  const shuffled = allProducts.sort(() => 0.5 - Math.random());
+  const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count).map((p: any) => p.name + ` x${getRandomInt(1, 3)}`);
-};
+}
 
-const getRandomMessage = () => ({
-  user: randomUsers[getRandomInt(0, randomUsers.length - 1)],
-  comment: randomComments[getRandomInt(0, randomComments.length - 1)],
-  items: getRandomItems(),
-});
+function getRandomMessage() {
+  return {
+    user: randomUsers[getRandomInt(0, randomUsers.length - 1)],
+    comment: randomComments[getRandomInt(0, randomComments.length - 1)],
+    items: getRandomItems(),
+  };
+}
   
-const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType, handleCheckOut, cart, cartTotal , onIncrease, onDecrease, chatMessages, setChatMessages,liveRating}) => {
-  
-
-
+const CartSidebar: React.FC<CartSidebarProps> = ({
+  orderType,
+  handleSetOrderType,
+  handleCheckOut,
+  cart,
+  cartTotal,
+  onIncrease,
+  onDecrease,
+  chatMessages,
+  setChatMessages,
+  liveRating
+}) => {
   const [chatComment, setChatComment] = useState('');
-
   const chatBoxRef = useRef<HTMLDivElement>(null);
   const [isUserScrolled, setIsUserScrolled] = useState(false);
 
+  // Scroll chat to bottom when new messages arrive
   useEffect(() => {
     const chatBox = chatBoxRef.current;
     if (!chatBox) return;
@@ -77,18 +85,18 @@ const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType,
     }
   }, [chatMessages, isUserScrolled]);
 
+  // Initialize chat messages if empty
   useEffect(() => {
-
     setChatMessages(prev => {
       if (prev.length >= MAX_CHAT_MESSAGES) return prev;
       const initialMessages = Array.from({ length: MAX_CHAT_MESSAGES }, getRandomMessage);
       return initialMessages;
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     let timeoutId: any;
-    console.log("liveRating", liveRating);
     if (liveRating) {
       const addRandomMessage = () => {
         setChatMessages(prev => {
@@ -103,14 +111,15 @@ const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType,
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [liveRating]);
+  }, [liveRating, setChatMessages]);
 
   // Get current user's cart items as names
-  const currentCartItems = Object.values(cart).map(
-    (item) => `${item.product.name} x${item.quantity}`
+  const currentCartItems = useMemo(
+    () => Object.values(cart).map(item => `${item.product.name} x${item.quantity}`),
+    [cart]
   );
 
-  const handleChatSubmit = (e: React.FormEvent) => {
+  const handleChatSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     if (!chatComment.trim()) return;
     setChatMessages(prev => {
@@ -118,7 +127,8 @@ const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType,
       return updated.slice(-MAX_CHAT_MESSAGES);
     });
     setChatComment('');
-  };
+  }, [chatComment, currentCartItems, setChatMessages]);
+
   return(   
   <div className="col-md-2 cart-last">
     <div className="wla-cart-dv" style={{ overflowY: 'auto', maxHeight: '100vh' }}>
