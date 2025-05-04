@@ -6,6 +6,8 @@ import FeaturedProducts from './featuredProducts';
 import SidebarMenu from './sidebarMenu';
 import CartSidebar from './cart';
 import { log } from 'console';
+import SearchModal from './Modals/SearchModal';
+import LoginModal from './Modals/LoginModal';
 
 interface Product {
     id: number;
@@ -34,24 +36,19 @@ interface Product {
 const OrderingPage: React.FC = () => {
   const [isClosed, setIsClosed] = useState(false);
   const [orderType, setOrderType] = useState<number>(1); // Default to Delivery
-  const menu: MenuCategory[] = require('../python-scripts/Menu.json');
+  let menu: MenuCategory[] = require('../python-scripts/Menu.json');
   const products : Product[] = menu.flatMap(category => category.products);
   const [cart, setCart] = useState<Record<number, { product: Product; quantity: number }>>({});
   const [cartTotal, setCartTotal] = useState(0);
-//   const handleAddToCart = (product: Product) => {
-//     setCart(prev => {
-//       const prevQty = prev[product.id]?.quantity || 0;
-//       return {
-//         ...prev,
-//         [product.id]: { product, quantity: prevQty + 1 }
-//       };
-//     });
-//   };
+  const [sortType, setSortType] = useState<'customer-favorites' | 'price-low' | 'price-high'>('customer-favorites');
+  const [liveRating, setLiveRating] = useState(true);
+  const [catagorize, setCatagorize] = useState(false);
+  const [alertMsg, setAlertMsg] = useState<string | null>(null);
+  const [showSearch, setShowSearch] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
-  /**
-   * Adds a product to the cart or increments its quantity if it's already there
-   * @param {number} productId - The ID of the product to add
-   */
+
+  
   const handleAddToCart = (productId: number) => {
     console.log("add to cart ", productId);
     setCart(prev => {
@@ -104,15 +101,81 @@ const OrderingPage: React.FC = () => {
     }));
   };
 
+  function sortMenu(menu: MenuCategory[], votes: Record<number, { likes: number; dislikes: number }>, sortType: string) {
+    let sortedMenu = !catagorize  ? 
+    [{ id: 0, name: "All Items", count: 0, imageUrl: "", products: menu.flatMap(category => category.products) }] 
+    : menu.map(category => ({
+      ...category,
+      products: [...category.products]
+    }));
+  
+    if (sortType === 'customer-favorites') {
+      sortedMenu.sort((a, b) => {
+        const aScore = wilsonScore(a.products.reduce((sum, product) => sum + (votes[product.id]?.likes || 0), 0), a.products.reduce((sum, product) => sum + (votes[product.id]?.dislikes || 0), 0));
+        const bScore = wilsonScore(b.products.reduce((sum, product) => sum + (votes[product.id]?.likes || 0), 0), b.products.reduce((sum, product) => sum + (votes[product.id]?.dislikes || 0), 0));
+        return bScore - aScore;
+      });
+
+      sortedMenu.sort((a, b) => {
+        const weightedScore = (category: MenuCategory) => {
+            let totalScore = 0;
+            let totalVotes = 0;
+
+            for (const product of category.products) {
+                const { likes = 0, dislikes = 0 } = votes[product.id] || {};
+                const n = likes + dislikes;
+                const score = wilsonScore(likes, dislikes);
+                totalScore += score * n;
+                totalVotes += n;
+            }
+
+            return totalVotes === 0 ? 0 : totalScore / totalVotes;
+        };
+
+        const aScore = weightedScore(a);
+        const bScore = weightedScore(b);
+
+        return bScore - aScore;
+      });
+    }else{
+      if(catagorize) {
+        setCatagorize(false);
+        sortedMenu = [{ id: 0, name: "All Items", count: 0, imageUrl: "", products: menu.flatMap(category => category.products) }];
+      }
+  
+      if(sortType === 'price-low') {
+        sortedMenu[0].products.sort((a, b) => a.price - b.price);
+      }
+      else if(sortType === 'price-high') {
+        sortedMenu[0].products.sort((a, b) => b.price - a.price);
+      }
+    }
+
+    
+    return sortedMenu;
+
+
+  }
+
+
 
   useEffect(() => {
     const total = Object.values(cart).reduce((sum, item) => sum + item.product.price * item.quantity, 0);
     setCartTotal(total);
   }, [cart]);
 
+  useEffect(() => {
+    if (alertMsg) {
+      const timeout = setTimeout(() => setAlertMsg(null), 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [alertMsg]);
+
+
 
   const handleCheckOut = () => {
     // Checkout logic here
+    setShowLogin(true);
   };
 
   const handleSetOrderType = (type: number, element: any) => {
@@ -147,6 +210,7 @@ function wilsonScore(likes: number, dislikes: number): number {
 
   useEffect(() => {
     const users = Array.from({ length: 50 }, (_, i) => `user_${i + 1}`);
+    const refreshInterval = liveRating ? 5 *1000 : 1000 * 60 * 5; // 5 sec or 5 minutes
   
     const interval = setInterval(() => {
       const updatedVotes = { ...votes };
@@ -165,54 +229,43 @@ function wilsonScore(likes: number, dislikes: number): number {
       });
   
       setVotes(updatedVotes);
-      // sort the menu categories based on the difference of likes and disilikes of each product and also sort the products within each category
-      // Sort products within each category by Wilson score (descending)
-        menu.forEach(category => {
-            category.products.sort((a, b) => {
-                const aVotes = updatedVotes[a.id] || { likes: 0, dislikes: 0 };
-                const bVotes = updatedVotes[b.id] || { likes: 0, dislikes: 0 };
+      console.log("Updated votes");
 
-                const aScore = wilsonScore(aVotes.likes, aVotes.dislikes);
-                const bScore = wilsonScore(bVotes.likes, bVotes.dislikes);
 
-                return bScore - aScore;
-            });
-        });
-
-        // Sort categories by weighted average Wilson score
-        menu.sort((a, b) => {
-            const weightedScore = (category: MenuCategory) => {
-                let totalScore = 0;
-                let totalVotes = 0;
-
-                for (const product of category.products) {
-                    const { likes = 0, dislikes = 0 } = updatedVotes[product.id] || {};
-                    const n = likes + dislikes;
-                    const score = wilsonScore(likes, dislikes);
-                    totalScore += score * n;
-                    totalVotes += n;
-                }
-
-                return totalVotes === 0 ? 0 : totalScore / totalVotes;
-            };
-
-            const aScore = weightedScore(a);
-            const bScore = weightedScore(b);
-
-            return bScore - aScore;
-        });
-
-    }, 5000);
+    }, refreshInterval);
   
     return () => clearInterval(interval);
-  }, [menu, votes]);
+  }, [menu, votes, liveRating]);
 
   return (
     <div className='space-top'>
+        {alertMsg && (
+          <div className='kdh-alert' role='alert'>
+            {alertMsg}
+          </div>
+        )}  
+        <SearchModal 
+          show={showSearch} 
+          setShow={setShowSearch} 
+          products={products} 
+          cart={cart}
+          onAddToCart={handleAddToCart} 
+          onRemoveFromCart={handleRemoveFromCart} 
+        />
+        < LoginModal 
+          show={showLogin} 
+          setShow={setShowLogin} 
+        />
+
     
         <div className="ordering-page wla-main-section">
         <div className="row m-0 w-100">
-            <SidebarMenu menu={menu} isClosed={isClosed} handleCheckOut={handleCheckOut} />
+            <SidebarMenu 
+              menu={menu} 
+              isClosed={isClosed} 
+              handleCheckOut={handleCheckOut} 
+              setCatagorize={setCatagorize}
+            />
           
             
             <div id="sticky-toggle"></div>
@@ -273,7 +326,7 @@ function wilsonScore(likes: number, dislikes: number): number {
                         <div>
                             <div className="row veg-row m-0">
                             <div className="col-4 col-md-7 voggle-left pl-0 pr-1">
-                                <span onClick={() => {}} style={{ cursor: 'pointer' }}>
+                                <span onClick={() => setShowSearch(true)} style={{ cursor: 'pointer' }}>
                                 <div className="search-div">
                                     <p>Search Menu</p>
                                     <span>
@@ -454,6 +507,58 @@ function wilsonScore(likes: number, dislikes: number): number {
                 <h3 className="common-heading"><span>Active Orders</span></h3>
                 <div className="active-order-div" id="getOrderSiderOverview"></div>
             </div>
+
+            <div className="kdh-toolbar d-flex align-items-center mt-3 flex-wrap" style={{gap: 24, background: "#fffa", padding: 10, borderRadius: 8, boxShadow: "0 1px 4px rgba(0,0,0,0.1)"}}>
+              <div className="d-flex align-items-center" style={{gap: 8}}>
+                <label className="mr-2 font-weight-bold" style={{marginBottom: 0, fontSize: 14}}>Sort by:</label>
+                <select
+                  value={sortType}
+                  onChange={e => setSortType(e.target.value as any)}
+                  style={{
+                    width: 210,
+                    height: 'fit-content',
+                    padding: 2,
+                    borderRadius: 6,
+                    border: "1px solid #ddd",
+                    fontSize: 12,
+                    background: "#fff",
+                    boxShadow: "none"
+                  }}
+                >
+                  <option value="customer-favorites">🔥 Customer Favorites</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                </select>
+              </div>
+              <div className="d-flex align-items-center" style={{gap: 6}}>
+                <input
+                  type="checkbox"
+                  id="live-rating"
+                  checked={liveRating}
+                  onChange={e => {
+                    setLiveRating(e.target.checked);
+                    setAlertMsg(e.target.checked ? 'Live rating enabled' : 'Live rating disabled');
+                  }}
+                  style={{accentColor: "#28a745"}}
+                />
+                <label htmlFor="live-rating" title="When enabled, product ratings will update automatically every 5 seconds with simulated user votes." style={{marginBottom: 0, fontSize: 15, cursor: "pointer"}}>
+                  <span style={{color: "#28a745", fontWeight: 500}}>Live</span>
+                  {/* <span className="d-none d-md-inline" style={{color: "#888", marginLeft: 4, fontWeight: 400, fontSize: 14}}>rating update</span> */}
+                </label>
+              </div>
+              <div className="d-flex align-items-center" style={{gap: 6}}>
+                <input
+                  type="checkbox"
+                  id="categorize"
+                  checked={catagorize}
+                  onChange={e => setCatagorize(e.target.checked)}
+                  style={{ accentColor: "#007bff"}}
+                />
+                <label htmlFor="categorize" title="When enabled, all items will be displayed in separate categories." style={{marginBottom: 0, fontSize: 15, cursor: "pointer"}}>
+                  <span style={{color: "#007bff", fontWeight: 500}}>Categorize</span>
+                </label>
+              </div>
+            </div>
             
             <div className="mid-section" data-offset="0">
                 {/* <div id="featuredProducts">
@@ -466,7 +571,7 @@ function wilsonScore(likes: number, dislikes: number): number {
                 </div> */}
 
                 <div id="productList">
-                {menu.map((category) => (
+                {sortMenu(menu, votes, sortType).map((category) => (
                     <FeaturedProducts
                     key={category.id}
                     categoryName={category.name}

@@ -97,6 +97,11 @@ const Header: React.FC = () => {
                   </a>
                 </li>
               ))}
+              <li className="nav-item active" key="login">
+                <span className="nav-link page-scroll"  style={{ cursor: "pointer", color: "#fa8708" }}>
+                  <i className="fa fa-user"></i>
+                </span>
+              </li>
               <li className="nav-item login-outer active">
                 <div className="row">
                   <div className="col-12">

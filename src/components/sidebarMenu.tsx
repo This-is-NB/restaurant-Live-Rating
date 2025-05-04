@@ -5,10 +5,11 @@ interface SidebarMenuProps {
   menu: any[];
   isClosed: boolean;
   handleCheckOut: () => void;
+  setCatagorize: (bool: boolean) => void;
 }
 
-const SidebarMenu: React.FC<SidebarMenuProps> = ({ menu, isClosed, handleCheckOut }) => (
-  <div className="col-lg-3 first-dv">
+const SidebarMenu: React.FC<SidebarMenuProps> = ({ menu, isClosed, handleCheckOut, setCatagorize }) => (
+  <div className="col-lg-3 first-dv" style={{ zIndex: 2 }}>
     <div className="fixed-black-screen"></div>
     <div className="fixed-cart-data">
       <div className="row m-0 justify-content-center">
@@ -47,24 +48,23 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ menu, isClosed, handleCheckOu
       <div className="d-flex d-lg-none align-items-center sticky-nav-men">
         <div>
           <a href="https://kakedihatti.com/">
-            <span>{/* SVG placeholder */}</span>
+            <span><i className="fa fa-home"/></span>
             <span className="d-block" style={{ lineHeight: '1.5em' }}>Home</span>
           </a>
         </div>
         <div>
           <a href="#" className="sticky-nav-men-active">
-            <span>{/* SVG placeholder */}</span>
+            <span><i className="fa fa-cutlery"/></span>
             <span className="d-block" style={{ lineHeight: '1.5em' }}>Order</span>
           </a>
         </div>
         <div className="price_mobile">
           <span onClick={handleCheckOut}>
-            {/* SVG placeholder */}
             <span className="cart-number">
-              {/* SVG placeholder */}
-              <span id="cartItemCount"></span>
+              <i className="fa fa-shopping-cart"/>
+              <span id="cartItemCount">3 </span>
             </span>
-            <span className="d-block" style={{ lineHeight: '1.5em' }}>Cart</span>
+            <span className="d-block" style={{ lineHeight: '1.5em' }}> Cart</span>
           </span>
         </div>
       </div>
@@ -77,6 +77,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ menu, isClosed, handleCheckOu
       <p className="categories-hd">Categories</p>
       <nav className="menu menu-top" id="sectionList">
         <MenuCategories categories={menu} onCategoryClick={(categoryName: string) => {
+          setCatagorize(true);
           const section = document.getElementById(categoryName.replace(/\s+/g, '-').toLowerCase());
           if (section) {
             const yOffset = -80;
