@@ -743,3 +743,24 @@ animation: flyDown 0.7s forwards;
     color: #666666;
     line-height: normal;
 }
+
+.modal-dialog.modal-content {
+    max-width: 400px !important;
+    padding: 20px !important;
+    top: 0px !important;
+    left: 36% !important;
+  }
+
+@media (max-width: 600px) {
+    .modal-dialog.modal-content {
+      max-width: 98vw !important;
+      width: 98vw !important;
+      margin: 0 auto !important;
+      padding: 10px !important;
+      left: 0 !important;
+      top: 0 !important;
+    }
+    .modal-body {
+      padding: 10px !important;
+    }
+  }
