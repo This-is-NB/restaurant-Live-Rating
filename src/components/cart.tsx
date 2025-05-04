@@ -14,6 +14,7 @@ interface CartSidebarProps {
     onDecrease: (productId: number) => void;
     chatMessages: { user: string; comment: string; items: string[] }[];
     setChatMessages: React.Dispatch<React.SetStateAction<{ user: string; comment: string; items: string[] }[]>>;
+    liveRating: boolean;
   }
 
 // Utility to get random int in range
@@ -59,7 +60,7 @@ const getRandomMessage = () => ({
   items: getRandomItems(),
 });
   
-const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType, handleCheckOut, cart, cartTotal , onIncrease, onDecrease, chatMessages, setChatMessages}) => {
+const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType, handleCheckOut, cart, cartTotal , onIncrease, onDecrease, chatMessages, setChatMessages,liveRating}) => {
   
 
 
@@ -83,18 +84,26 @@ const CartSidebar: React.FC<CartSidebarProps> = ({orderType, handleSetOrderType,
       const initialMessages = Array.from({ length: MAX_CHAT_MESSAGES }, getRandomMessage);
       return initialMessages;
     });
-    const addRandomMessage: any = () => {
-      setChatMessages(prev => {
-        const updated = [...prev, getRandomMessage()];
-        return updated.slice(-MAX_CHAT_MESSAGES);
-      });
-      
-      const nextTimeout = getRandomInt(5000, 10000);
-      return setTimeout(addRandomMessage, nextTimeout);
-    };
-    const timeoutId = addRandomMessage();
-    return () => clearTimeout(timeoutId);
   }, []);
+
+  useEffect(() => {
+    let timeoutId: any;
+    console.log("liveRating", liveRating);
+    if (liveRating) {
+      const addRandomMessage = () => {
+        setChatMessages(prev => {
+          const updated = [...prev, getRandomMessage()];
+          return updated.slice(-MAX_CHAT_MESSAGES);
+        });
+        const nextTimeout = getRandomInt(5000, 10000);
+        timeoutId = setTimeout(addRandomMessage, nextTimeout);
+      };
+      addRandomMessage();
+    }
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [liveRating]);
 
   // Get current user's cart items as names
   const currentCartItems = Object.values(cart).map(

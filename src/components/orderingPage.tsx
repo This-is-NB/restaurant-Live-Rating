@@ -65,10 +65,8 @@ const OrderingPage: React.FC = () => {
   
   
   const handleAddToCart = (productId: number) => {
-    console.log("add to cart ", productId);
     setCart(prev => {
       const newCart = { ...prev };
-      console.log("1 new cart ", newCart);
       if (newCart[productId]) {
         newCart[productId].quantity += 1;
       }else{
@@ -77,14 +75,12 @@ const OrderingPage: React.FC = () => {
           newCart[productId] = { product, quantity: 1 };
         }
       }
-    console.log("2 new cart ", newCart);
       return newCart;
     });
   };
 
 
   const handleRemoveFromCart = (productId: number) => {
-    console.log("remove from cart ", productId);
     setCart(prev => {
       const newCart = { ...prev };
         if (newCart[productId]) {
@@ -123,12 +119,17 @@ const OrderingPage: React.FC = () => {
       ...category,
       products: [...category.products]
     }));
+
   
     if (sortType === 'customer-favorites') {
-      sortedMenu.sort((a, b) => {
-        const aScore = wilsonScore(a.products.reduce((sum, product) => sum + (votes[product.id]?.likes || 0), 0), a.products.reduce((sum, product) => sum + (votes[product.id]?.dislikes || 0), 0));
-        const bScore = wilsonScore(b.products.reduce((sum, product) => sum + (votes[product.id]?.likes || 0), 0), b.products.reduce((sum, product) => sum + (votes[product.id]?.dislikes || 0), 0));
-        return bScore - aScore;
+      sortedMenu.forEach(category => {
+        category.products.sort((a, b) => {
+          const aVotes = votes[a.id] || { likes: 0, dislikes: 0 };
+          const bVotes = votes[b.id] || { likes: 0, dislikes: 0 };
+          const aScore = wilsonScore(aVotes.likes, aVotes.dislikes);
+          const bScore = wilsonScore(bVotes.likes, bVotes.dislikes);
+          return bScore - aScore;
+        });
       });
 
       sortedMenu.sort((a, b) => {
@@ -214,34 +215,35 @@ function wilsonScore(likes: number, dislikes: number): number {
 }
 
 
-  useEffect(() => {
-    const users = Array.from({ length: 50 }, (_, i) => `user_${i + 1}`);
-    const refreshInterval = liveRating ? 5 *1000 : 1000 * 60 * 5; // 5 sec or 5 minutes
-  
-    const interval = setInterval(() => {
-      const updatedVotes = { ...votes };
-  
+useEffect(() => {
+  const users = Array.from({ length: 50 }, (_, i) => `user_${i + 1}`);
+  const refreshInterval = liveRating ? 5 * 1000 : 1000 * 60 * 5; // 5 sec or 5 minutes
+
+  const interval = setInterval(() => {
+    setVotes(prevVotes => {
+      // Create a shallow copy to avoid mutating state directly
+      const updatedVotes = { ...prevVotes };
+
       users.forEach(() => {
-        // const randomProduct = products[Math.floor(Math.random() * products.length)];
         const randomProduct = products[Math.floor(Math.random() * products.length)];
-        // const randomProduct = menu[Math.floor(Math.random() * menu.length)].products[Math.floor(Math.random() * menu[0].products.length)];
         const isLike = Math.random() > 0.5;
-  
-        if (isLike) {
-          updatedVotes[randomProduct.id].likes += 1;
-        } else {
-          updatedVotes[randomProduct.id].dislikes += 1;
+
+        // Ensure the product exists in votes before updating
+        if (updatedVotes[randomProduct.id]) {
+          updatedVotes[randomProduct.id] = {
+            ...updatedVotes[randomProduct.id],
+            likes: updatedVotes[randomProduct.id].likes + (isLike ? 1 : 0),
+            dislikes: updatedVotes[randomProduct.id].dislikes + (isLike ? 0 : 1),
+          };
         }
       });
-  
-      setVotes(updatedVotes);
-      console.log("Updated votes");
 
+      return updatedVotes;
+    });
+  }, refreshInterval);
 
-    }, refreshInterval);
-  
-    return () => clearInterval(interval);
-  }, [menu, votes, liveRating]);
+  return () => clearInterval(interval);
+}, [products, liveRating]);
 
   return (
     <div className='space-top'>
@@ -624,6 +626,7 @@ function wilsonScore(likes: number, dislikes: number): number {
                 onDecrease={handleRemoveFromCart}
                 chatMessages={chatMessages} // <-- pass chat messages
                 setChatMessages={setChatMessages} 
+                liveRating={liveRating}
           />
 
         </div>
