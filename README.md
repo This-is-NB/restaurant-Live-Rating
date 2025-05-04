@@ -103,6 +103,37 @@ Check out the live improved app here:
 
 ---
 
+## 🔮 Future Enhancements
+
+- **User Authentication & Profiles:**  
+  Allow users to sign up, log in, and track their own reviews, likes/dislikes, and order history for a more personalized experience.
+
+- **Persistent Data with Backend:**  
+  Integrate a backend/database so that reviews, likes/dislikes, and chat history are saved and can be analyzed over time, not just simulated for the day.
+
+- **Admin Dashboard & Analytics:**  
+  Provide restaurant/cafeteria admins with insights into trending dishes, most/least liked items, and real-time feedback analytics to improve menu planning and quality.
+
+- **Push Notifications:**  
+  Notify users when their favorite dishes are trending, when new menu items are added, or when their review gets a response.
+
+- **Photo Uploads in Reviews:**  
+  Let users upload photos of their meals to make reviews more engaging, authentic, and helpful for others.
+
+- **Advanced Filtering & Search:**  
+  Add filters for dietary preferences (veg, vegan, gluten-free), allergens, and more powerful search capabilities to help users find exactly what they want.
+
+- **Mobile App Version:**  
+  Build a dedicated mobile app for an even smoother and more accessible ordering and reviewing experience.
+
+- **Integration with Real-Time Ordering Systems:**  
+  Connect with POS or kitchen systems for live order status, estimated prep times, and more seamless user experience.
+
+- **Gamification & Rewards:**  
+  Introduce badges, leaderboards, or rewards for top reviewers and active users to encourage more participation and engagement.
+
+---
+
 
 ## 🛠️ Tech Stack
 
