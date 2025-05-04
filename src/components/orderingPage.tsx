@@ -5,6 +5,7 @@ import food_deliverySrc from '../assets/fooddelivery.png';
 import FeaturedProducts from './featuredProducts';
 import SidebarMenu from './sidebarMenu';
 import CartSidebar from './cart';
+import { log } from 'console';
 
 interface Product {
     id: number;
@@ -32,9 +33,83 @@ interface Product {
 
 const OrderingPage: React.FC = () => {
   const [isClosed, setIsClosed] = useState(false);
-  const [orderType, setOrderType] = useState<number | null>(null);
+  const [orderType, setOrderType] = useState<number>(1); // Default to Delivery
   const menu: MenuCategory[] = require('../python-scripts/Menu.json');
   const products : Product[] = menu.flatMap(category => category.products);
+  const [cart, setCart] = useState<Record<number, { product: Product; quantity: number }>>({});
+  const [cartTotal, setCartTotal] = useState(0);
+//   const handleAddToCart = (product: Product) => {
+//     setCart(prev => {
+//       const prevQty = prev[product.id]?.quantity || 0;
+//       return {
+//         ...prev,
+//         [product.id]: { product, quantity: prevQty + 1 }
+//       };
+//     });
+//   };
+
+  /**
+   * Adds a product to the cart or increments its quantity if it's already there
+   * @param {number} productId - The ID of the product to add
+   */
+  const handleAddToCart = (productId: number) => {
+    console.log("add to cart ", productId);
+    setCart(prev => {
+      const newCart = { ...prev };
+      console.log("1 new cart ", newCart);
+      if (newCart[productId]) {
+        newCart[productId].quantity += 1;
+      }else{
+        const product = products.find(p => p.id === productId);
+        if (product) {
+          newCart[productId] = { product, quantity: 1 };
+        }
+      }
+    console.log("2 new cart ", newCart);
+      return newCart;
+    });
+  };
+
+
+  const handleRemoveFromCart = (productId: number) => {
+    console.log("remove from cart ", productId);
+    setCart(prev => {
+      const newCart = { ...prev };
+        if (newCart[productId]) {
+            newCart[productId].quantity -= 1;
+            if (newCart[productId].quantity <= 0) {
+            delete newCart[productId];
+            }
+        }
+      return newCart;
+    });
+  };
+  const handleLike = (productId: number) => {
+    setVotes(prev => ({
+      ...prev,
+      [productId]: {
+        ...prev[productId],
+        likes: (prev[productId]?.likes || 0) + 1
+      }
+    }));
+  };
+  
+  const handleDislike = (productId: number) => {
+    setVotes(prev => ({
+      ...prev,
+      [productId]: {
+        ...prev[productId],
+        dislikes: (prev[productId]?.dislikes || 0) + 1
+      }
+    }));
+  };
+
+
+  useEffect(() => {
+    const total = Object.values(cart).reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+    setCartTotal(total);
+  }, [cart]);
+
 
   const handleCheckOut = () => {
     // Checkout logic here
@@ -60,6 +135,15 @@ const OrderingPage: React.FC = () => {
     // return initialVotes;
 //   });
 
+function wilsonScore(likes: number, dislikes: number): number {
+    const n = likes + dislikes;
+    if (n === 0) return 0;
+    const z = 1.96; // 95% confidence
+    const p = likes / n;
+    const score = (p + z*z/(2*n) - z * Math.sqrt((p*(1 - p) + z*z/(4*n)) / n)) / (1 + z*z/n);
+    return score;
+}
+
 
   useEffect(() => {
     const users = Array.from({ length: 50 }, (_, i) => `user_${i + 1}`);
@@ -82,20 +166,42 @@ const OrderingPage: React.FC = () => {
   
       setVotes(updatedVotes);
       // sort the menu categories based on the difference of likes and disilikes of each product and also sort the products within each category
+      // Sort products within each category by Wilson score (descending)
         menu.forEach(category => {
             category.products.sort((a, b) => {
-            const aVotes = updatedVotes[a.id] || { likes: 0, dislikes: 0 };
-            const bVotes = updatedVotes[b.id] || { likes: 0, dislikes: 0 };
-            return (bVotes.likes - bVotes.dislikes) - (aVotes.likes - aVotes.dislikes);
+                const aVotes = updatedVotes[a.id] || { likes: 0, dislikes: 0 };
+                const bVotes = updatedVotes[b.id] || { likes: 0, dislikes: 0 };
+
+                const aScore = wilsonScore(aVotes.likes, aVotes.dislikes);
+                const bScore = wilsonScore(bVotes.likes, bVotes.dislikes);
+
+                return bScore - aScore;
             });
         });
 
-        // sort the menu categories based on the difference of likes and disilikes of top product
+        // Sort categories by weighted average Wilson score
         menu.sort((a, b) => {
-            const aVotes = a.products[0] ? updatedVotes[a.products[0].id] : { likes: 0, dislikes: 0 };
-            const bVotes = b.products[0] ? updatedVotes[b.products[0].id] : { likes: 0, dislikes: 0 };
-            return (bVotes.likes - bVotes.dislikes) - (aVotes.likes - aVotes.dislikes);
-        })
+            const weightedScore = (category: MenuCategory) => {
+                let totalScore = 0;
+                let totalVotes = 0;
+
+                for (const product of category.products) {
+                    const { likes = 0, dislikes = 0 } = updatedVotes[product.id] || {};
+                    const n = likes + dislikes;
+                    const score = wilsonScore(likes, dislikes);
+                    totalScore += score * n;
+                    totalVotes += n;
+                }
+
+                return totalVotes === 0 ? 0 : totalScore / totalVotes;
+            };
+
+            const aScore = weightedScore(a);
+            const bScore = weightedScore(b);
+
+            return bScore - aScore;
+        });
+
     }, 5000);
   
     return () => clearInterval(interval);
@@ -366,6 +472,11 @@ const OrderingPage: React.FC = () => {
                     categoryName={category.name}
                     products={category.products}
                     votes={votes}  // Assuming products are an array in each category
+                    onAddToCart={handleAddToCart}
+                    onRemoveFromCart={handleRemoveFromCart}
+                    cart={cart}
+                    onLike={handleLike}
+                    onDislike={handleDislike}
                     />
                 ))}
                 </div>
@@ -391,7 +502,15 @@ const OrderingPage: React.FC = () => {
             </div>
             </div>
             
-            <CartSidebar handleSetOrderType={handleSetOrderType} handleCheckOut={handleCheckOut} />
+            <CartSidebar
+                orderType={orderType}
+                handleSetOrderType={handleSetOrderType}
+                handleCheckOut={handleCheckOut}
+                cart={cart}
+                cartTotal={cartTotal}
+                onIncrease={handleAddToCart}
+                onDecrease={handleRemoveFromCart}
+          />
 
         </div>
         </div>

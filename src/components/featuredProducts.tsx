@@ -14,39 +14,65 @@ interface Product {
     dislikes?: number;
   }
 
-interface FeaturedProductsProps {
-  categoryName: string;
-  products: Product[];
-  votes: Record<number, { likes: number; dislikes: number }>;
-}
+  interface FeaturedProductsProps {
+    categoryName: string;
+    products: Product[];
+    votes: Record<number, { likes: number; dislikes: number }>;
+    onAddToCart: (productId: number) => void;
+    cart: Record<number, { product: Product; quantity: number }>;
+    onRemoveFromCart: (productId: number) => void;
+    onLike: (productId: number) => void;         // <-- Add this
+    onDislike: (productId: number) => void;  
+  }
 
 
 
-const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, products, votes }) => {
-  const [quantities, setQuantities] = useState<Record<number, number>>({});
+const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, products, votes, onAddToCart, cart, onRemoveFromCart , onLike, onDislike}) => {
+//   const [quantities, setQuantities] = useState<Record<number, number>>({});
+
+const [animating, setAnimating] = useState<{ [id: number]: 'like' | 'dislike' | null }>({});
+
+  const handleLikeClick = (productId: number) => {
+    setAnimating(a => ({ ...a, [productId]: 'like' }));
+    onLike(productId);
+    setTimeout(() => setAnimating(a => ({ ...a, [productId]: null })), 700); // match animation duration
+  };
+
+  const handleDislikeClick = (productId: number) => {
+    setAnimating(a => ({ ...a, [productId]: 'dislike' }));
+    onDislike(productId);
+    setTimeout(() => setAnimating(a => ({ ...a, [productId]: null })), 700);
+  };
+
 
   const handleAddClick = (productId: number) => {
-    setQuantities(prev => ({ ...prev, [productId]: 1 }));
+    // setQuantities(prev => ({ ...prev, [productId]: 1 }));
+    // const product = products.find(p => p.id === productId);
+    // if (product) {
+      onAddToCart(productId);
+    // }
   };
 
   const handleDecrease = (productId: number) => {
-    setQuantities(prev => {
-      const newQuantity = (prev[productId] || 0) - 1;
-      if (newQuantity <= 0) {
-        const newQuantities = { ...prev };
-        delete newQuantities[productId];
-        return newQuantities;
-      }
-      return { ...prev, [productId]: newQuantity };
-    });
+    // setQuantities(prev => {
+    //   const newQuantity = (prev[productId] || 0) - 1;
+    //   if (newQuantity <= 0) {
+    //     const newQuantities = { ...prev };
+    //     delete newQuantities[productId];
+    //     return newQuantities;
+    //   }
+    //   return { ...prev, [productId]: newQuantity };
+    // });
+    onRemoveFromCart(productId);
   };
 
   const handleIncrease = (productId: number, categoryId: number) => {
-    setQuantities(prev => ({ 
-      ...prev, 
-      [productId]: (prev[productId] || 0) + 1 
-    }));
+    // setQuantities(prev => ({ 
+    //   ...prev, 
+    //   [productId]: (prev[productId] || 0) + 1 
+    // }));
     // Here you would typically call showVariant(productId, categoryId)
+    onAddToCart(productId);
   };
 
   const openVariantModal = (productId: number, categoryId: number) => {
@@ -112,7 +138,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, produ
                   <div className="item-card-placeholder-detail-new item-without-img-detail">
                     <div className="item-card-placeholder-nw-outer">
                       <div className="cart-new-btn rating-tp">
-                        {!quantities[product.id] ? (
+                        {!cart[product.id]?.quantity ? (
                           <div 
                             className="cart-count-add cart-btn" 
                             onClick={() => handleAddClick(product.id)} 
@@ -137,7 +163,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, produ
                               id={`qty-input-${product.id}`} 
                               className="_2zAXs _2quy-" 
                               readOnly 
-                              value={quantities[product.id]} 
+                              value={cart[product.id].quantity} 
                             />
                             <div 
                               className="_1ds9T _2WdfZ" 
@@ -155,14 +181,79 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ categoryName, produ
                         ></div>
                       </div>
                     </div>
-                  <div className="vote-section mt-2">
-                    <span style={{ color: 'green', marginRight: '10px' }}>
+                    {/* <div className="vote-section mt-2">
+                        <span
+                        style={{ color: 'green', marginRight: '10px', cursor: 'pointer' }}
+                        onClick={() => onLike(product.id)}
+                        title="Like"
+                        >
                         👍 {votes[product.id]?.likes || 0}
-                    </span>
-                    <span style={{ color: 'red' }}>
+                        </span>
+                        <span
+                        style={{ color: 'red', cursor: 'pointer' }}
+                        onClick={() => onDislike(product.id)}
+                        title="Dislike"
+                        >
                         👎 {votes[product.id]?.dislikes || 0}
-                    </span>
-                  </div>  
+                        </span>
+                    </div>   */}
+                    <div className="vote-section mt-2" style={{ position: 'relative', minHeight: 32 }}>
+                        {/* Original Like/Dislike buttons */}
+                        <span
+                            className="like-btn"
+                            style={{ color: 'green', marginRight: '10px', cursor: 'pointer', display: 'inline-block', position: 'relative', zIndex: 1 }}
+                            onClick={() => handleLikeClick(product.id)}
+                            title="Like"
+                        >
+                            👍 {votes[product.id]?.likes || 0}
+                        </span>
+                        <span
+                            className="dislike-btn"
+                            style={{ color: 'red', cursor: 'pointer', display: 'inline-block', position: 'relative', zIndex: 1 }}
+                            onClick={() => handleDislikeClick(product.id)}
+                            title="Dislike"
+                        >
+                            👎 {votes[product.id]?.dislikes || 0}
+                        </span>
+
+                        {/* Flying shadow for Like */}
+                        {animating[product.id] === 'like' && (
+                            <span
+                            className="like-btn fly-up-shadow"
+                            style={{
+                                color: 'green',
+                                marginRight: '10px',
+                                position: 'absolute',
+                                left: 0,
+                                top: 0,
+                                pointerEvents: 'none',
+                                opacity: 0.7,
+                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))',
+                            }}
+                            >
+                            👍
+                            </span>
+                        )}
+
+                        {/* Flying shadow for Dislike */}
+                        {animating[product.id] === 'dislike' && (
+                            <span
+                            className="dislike-btn fly-down-shadow"
+                            style={{
+                                color: 'red',
+                                position: 'absolute',
+                                left: 40, // adjust if needed to match the thumbs down position
+                                top: 0,
+                                pointerEvents: 'none',
+                                opacity: 0.7,
+                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))',
+                            }}
+                            >
+                            👎
+                            </span>
+                        )}
+                    </div>
+
                   </div>
                   
                   {!product.isAvailable && (
