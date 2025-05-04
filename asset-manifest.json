@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/restaurant-Live-Rating/static/css/main.4c0fec37.css",
-    "main.js": "/restaurant-Live-Rating/static/js/main.7f5d8cee.js",
+    "main.js": "/restaurant-Live-Rating/static/js/main.2cfeaf74.js",
     "static/js/453.503914dd.chunk.js": "/restaurant-Live-Rating/static/js/453.503914dd.chunk.js",
     "static/media/fooddelivery.png": "/restaurant-Live-Rating/static/media/fooddelivery.e0909eca427e93097cb6.png",
     "index.html": "/restaurant-Live-Rating/index.html",
     "main.4c0fec37.css.map": "/restaurant-Live-Rating/static/css/main.4c0fec37.css.map",
-    "main.7f5d8cee.js.map": "/restaurant-Live-Rating/static/js/main.7f5d8cee.js.map",
+    "main.2cfeaf74.js.map": "/restaurant-Live-Rating/static/js/main.2cfeaf74.js.map",
     "453.503914dd.chunk.js.map": "/restaurant-Live-Rating/static/js/453.503914dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c0fec37.css",
-    "static/js/main.7f5d8cee.js"
+    "static/js/main.2cfeaf74.js"
   ]
 }
